@@ -1,6 +1,6 @@
 		<div class="row">
 			<header>
-				<img id="logo" src="icon.svg" alt>
+				<img id="logo" src="images/logo.svg" alt>
 				<div>
 					<h1><a href="#" itemprop="name">Joseph Mansfield</a></h1>
 					<nav>
