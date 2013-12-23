@@ -1,1 +1,227 @@
 @import "compass/reset";
+@import "compass/typography/links";
+@import "compass/utilities/general/clearfix";
+
+$page-bgcolor: #fdfdfd;
+$primary-text-color: #222222;
+$secondary-text-color: lighten($primary-text-color, 30%);
+$link-text-color: #347192;
+
+$base-font-size: 19px;
+$base-line-height: 1.5em;
+$base-font-family: 'Open Sans', sans-serif;
+$small-font-size: 0.8em;
+$title-font-size: 2rem;
+$skinny-title-font-size: 1.6rem;
+$title-font-family: 'Goudy Bookletter 1911', serif;
+
+$size-names: wide, normal, thin, skinny;
+$size-page-width: 1290px, 960px, 700px, auto;
+$size-column-width: 300px, 300px, 220px, auto;
+$size-gutter-width: 30px, 30px, 20px, 0px;
+
+@function page-width($size) {
+	@return nth($size-page-width, index($size-names, $size));
+}
+
+@function column-width($size) {
+	@return nth($size-column-width, index($size-names, $size));
+}
+
+@function gutter-width($size) {
+	@return nth($size-gutter-width, index($size-names, $size));
+}
+
+@function column-width-n($size, $columns: 1) {
+	@if $size == skinny {
+		@return column_width($size);
+	} @else {
+		@return column_width($size) + (column-width($size) + gutter-width($size))
+		                            * ($columns - 1);
+	}
+}
+
+@function column-offset($size, $column) {
+	@return gutter-width($size) + (column-width($size) + gutter-width($size))
+	                            * $column;
+}
+
+@function vert($unit) {
+	@return 1em * $unit;
+}
+
+.row {
+	@include clearfix;
+	margin-bottom: vert(1);
+	margin-left: -(gutter-width(wide));
+
+	@media (max-width: 1350px) {
+		margin-left: -(gutter-width(normal));
+	}
+	@media (max-width: 1020px) {
+		margin-left: -(gutter-width(thin));
+	}
+	@media (max-width: 760px) {
+		margin-left: -(gutter-width(skinny));
+	}
+}
+
+@mixin column {
+	float: left;
+	margin-left: gutter-width(wide);
+
+	@media (max-width: 1350px) {
+		margin-left: gutter-width(normal);
+	}
+	@media (max-width: 1020px) {
+		margin-left: gutter-width(thin);
+	}
+	@media (max-width: 760px) {
+		margin-left: gutter-width(skinny);
+	}
+}
+
+@for $i from 1 through 4 {
+	.column-#{$i} {
+		@include column;
+		margin-bottom: vert(1);
+		width: column-width-n(wide, $i);
+
+		@media (max-width: 1350px) {
+			width: column-width-n(normal, $i);
+		}
+		@media (max-width: 1020px) {
+			width: column-width-n(thin, $i);
+		}
+		@media (max-width: 760px) {
+			margin-bottom: vert(2);
+			width: column-width-n(skinny, $i);
+		}
+	}
+}
+
+@mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html {
+	color: $primary-text-color;
+	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+body {
+	@include center;
+	width: page-width(wide);
+	padding: vert(3) 0;
+	background-color: $page-bgcolor;
+
+	> .row {
+		margin-bottom: 0;
+
+		> header {
+			@extend .column-1;
+			text-align: center;
+
+			#logo {
+				width: auto;
+				height: vert(10);
+			}
+
+			nav {
+				margin: vert(1) 0;
+
+				ul li {
+					margin-bottom: vert(0.5);
+				}
+			}
+
+			h1 a {
+				@include unstyled-link;
+				font: $title-font-size $title-font-family;
+			}
+
+			@media (max-width: 1350px) {
+				width: 100%;
+				text-align: left;
+
+				#logo {
+					float: left;
+					margin: 0 1em 1em 0;
+					height: vert(8);
+				}
+
+				> div {
+					margin-top: vert(0.7);
+				}
+
+				nav {
+					margin: vert(0.7) 0;
+
+					ul li {
+						float: left;
+						margin-right: 2em;
+					}
+				}
+			}
+
+			@media (max-width: 760px) {
+				margin-bottom: vert(1);
+
+				#logo {
+					height: vert(6);
+				}
+
+				> div {
+					margin-top: vert(0.1);
+				}
+
+				h1 a {
+					font-size: $skinny-title-font-size;
+				}
+
+				nav ul li {
+					margin-right: 1em;
+				}
+			}
+		}
+
+		> main {
+			margin-bottom: 0;
+		}
+
+		> footer {
+			margin-bottom: 0;
+
+			@media (min-width: 1351px) {
+				margin-left: column-offset(wide, 1);
+			}
+		}
+	}
+
+	@media (max-width: 1350px) {
+		width: page-width(normal);
+	}
+	@media (max-width: 1020px) {
+		width: page-width(thin);
+	}
+	@media (max-width: 760px) {
+		width: page-width(skinny);
+		margin: 0 30px;
+		padding: vert(2) 0;
+	}
+}
+
+a {
+	@include link-colors($link-text-color);
+	@include hover-link;
+}
+
+.secondary {
+	color: $secondary-text-color;
+}
+
+small {
+	@extend .secondary;
+	font-size: $small-font-size;
+}
