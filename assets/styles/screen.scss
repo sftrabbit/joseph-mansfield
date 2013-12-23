@@ -1,4 +1,5 @@
 @import "compass/reset";
+@import "compass/css3/border-radius";
 @import "compass/typography/links";
 @import "compass/utilities/general/clearfix";
 
@@ -6,6 +7,7 @@ $page-bgcolor: #fdfdfd;
 $primary-text-color: #222222;
 $secondary-text-color: lighten($primary-text-color, 30%);
 $link-text-color: #347192;
+$header-text-color: #9ab549;
 
 $base-font-size: 19px;
 $base-line-height: 1.5em;
@@ -212,6 +214,10 @@ body {
 	}
 }
 
+p {
+	margin-bottom: vert(1);
+}
+
 a {
 	@include link-colors($link-text-color);
 	@include hover-link;
@@ -224,4 +230,85 @@ a {
 small {
 	@extend .secondary;
 	font-size: $small-font-size;
+}
+
+section, article {
+	h1 {
+		margin-bottom: vert(1);
+		font-size: 1.6em;
+		line-height: 1em;
+		color: $header-text-color;
+	}
+
+	h2 {
+		margin-top: 1em;
+		margin-bottom: 0.4em;
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+} 
+
+.stackoverflow-info {
+	@include unstyled-link;
+	display: block;
+	float: left;
+	width: 150px;
+	margin-right: 1em;
+	margin-bottom: vert(1);
+
+	img {
+		float: left;
+		width: auto;
+		height: vert(3);
+		margin-right: 0.5em;
+	}
+
+	.reputation {
+		display: block;
+		font-weight: bold;
+	}
+
+	&:hover {
+		color: $link-text-color;
+	}
+}
+
+.github-info {
+	float: left;
+	display: block;
+	margin-right: 1em;
+	margin-bottom: vert(1);
+
+	img {
+		width: auto;
+		height: vert(3);
+	}
+}
+
+.button {
+	@include border-radius;
+	display: block;
+	float: left;
+	margin-top: 0px;
+	padding: vert(0.5) 3em;
+	color: #bdd8e3;
+	text-align: center;
+	background-color: #5e9bbc;
+	border-bottom: 3px solid #347192;
+
+	&:active {
+		margin-top: 3px;
+		border-bottom: 0px;
+	}
+}
+
+.blog-list time {
+	display: block;
+	font-size: $small-font-size;
+	line-height: 1.4em;
+	font-weight: bold;
+}
+
+.blog-list li {
+	margin-bottom: vert(1);
 }
