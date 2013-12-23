@@ -14,12 +14,8 @@ def get_data_value(data, match):
 	return match.group(0)
 
 def get_template_content(data, match):
-	try:
-		template_name = match.group(2)
-		return expand_template(template_name, data).rstrip()
-	except IOError:
-		print("Template " + template_name + " does not exist")
-		return match.group(0)
+	template_name = match.group(2)
+	return expand_template(template_name, data).rstrip()
 
 def expand_template(template_name, data):
 	with open(get_template_file_name(template_name)) as template_file:
@@ -42,7 +38,10 @@ def expand_template(template_name, data):
 def build():
 	project_directory = os.path.dirname(os.path.realpath(__file__));
 	os.chdir(project_directory)
-	print(expand_template("root", {'page': 'home'}))
+	try:
+		print(expand_template("root", {'page': 'home'}))
+	except IOError as e:
+		print("Template " + e.filename + " does not exist")
 
 if __name__ == "__main__":
 	build()
