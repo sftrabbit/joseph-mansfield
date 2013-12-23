@@ -4,7 +4,8 @@
 @head
 	</head>
 	<body $bodyMicrodata>
-@header
+{each $bodyMicrodataMeta:		<meta itemprop="$name" content="$content">
+}@header
 @$page
 @footer
 	</body>
