@@ -1,1 +1,37 @@
-home content
+				<div class="row">
+					<div class="column-2">
+						<p class="secondary">Joseph is a software developer and computer science student at the <a itemprop=affiliation href=http://york.ac.uk/>University of York</a>. Proin eget pretium erat. Aenean condimentum ut tortor ac egestas. Sed rutrum, mi vitae ultricies condimentum, mi ipsum cursus.</p>
+					</div>
+					<div class="column-1">
+						<a class="stackoverflow-info" href=http://stackoverflow.com/users/150634/sftrabbit>
+							<img src=stackoverflow.svg alt="Stack Overflow profile" title="Stack Overflow profile">
+							<span class="reputation">38,770</span>
+							<span class="gold-badges">3</span>
+							<span class="silver-badges">42</span>
+							<span class="bronze-badges">117</span>
+						</a>
+						<a class="github-info" href=#><img src=github.png alt="GitHub repositories"></a>
+						<a class="button" href=#><abbr title="Curriculum Vitae">CV</abbr></a>
+					</div>
+				</div>
+				<div class="row">
+					<section class="column-2">
+						<h1>Articles</h1>
+						<h2>C++</h2>
+						<ul>
+							<li><a href=#>Suspendisse nec malesuada magna in</a>
+							<li><a href=#>Vestibulum elementum euismod urna sit amet ultricies</a>
+						</ul>
+						<h2>Android</h2>
+						<ul>
+							<li><a href=#>Donec egestas leo purus</a>
+						</ul>
+					</section>
+					<section class="column-1 blog-list">
+						<h1>Blog</h1>
+						<ul>
+							<li><time datetime>18th December</time> <a href=#>Curabitur aliquet arcu purus vel congue nunc imperdiet</a>
+							<li><time datetime>23rd November</time> <a href=#>Donec placerat eu lacus</a>
+						</ul>
+					</section>
+				</div>
