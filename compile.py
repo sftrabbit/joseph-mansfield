@@ -4,7 +4,7 @@ import os
 import re
 
 BUILD_DIR = os.getcwd()
-SITE_DIR = BUILD_DIR + "/site"
+PUBLIC_DIR = BUILD_DIR + "/pub"
 
 def get_template_file_name(template_name):
 	return "templates/" + template_name + ".htmt"
@@ -71,10 +71,10 @@ def build():
 		}
 		home_content = expand_template("root", home_data)
 
-		if not os.path.exists(SITE_DIR):
-			os.mkdir(SITE_DIR)
+		if not os.path.exists(PUBLIC_DIR):
+			os.mkdir(PUBLIC_DIR)
 
-		home_file = open(SITE_DIR + "/index.htm", "w")
+		home_file = open(PUBLIC_DIR + "/index.htm", "w")
 		home_file.write(home_content)
 	except IOError as e:
 		print("Template " + e.filename + " does not exist")
