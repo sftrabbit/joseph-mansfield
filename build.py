@@ -39,7 +39,11 @@ def build():
 	project_directory = os.path.dirname(os.path.realpath(__file__));
 	os.chdir(project_directory)
 	try:
-		print(expand_template("root", {'page': 'home'}))
+		home_data = {
+			'page': 'home',
+			'bodyMicrodata': 'itemscope itemtype="Person"'
+		}
+		print(expand_template("root", home_data))
 	except IOError as e:
 		print("Template " + e.filename + " does not exist")
 

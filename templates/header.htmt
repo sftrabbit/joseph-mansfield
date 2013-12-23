@@ -2,7 +2,7 @@
 			<header>
 				<img id="logo" src="icon.svg" alt>
 				<div>
-					<h1><a href="#">Joseph Mansfield</a></h1>
+					<h1><a href="#" itemprop="name">Joseph Mansfield</a></h1>
 					<nav>
 						<ul>
 							<li><a href="#">Articles</a>
