@@ -2,28 +2,30 @@
 
 import os
 import re
-import functools
-import textwrap
 
 def get_template_file_name(template_name):
 	return "templates/" + template_name + ".htmt"
 
-def apply_each(data, match):
-	data_list = data[match.group(1)]
-	text = match.group(2)
-	result = ""
-	for data_item in data_list:
-		data_value_func = functools.partial(get_data_value, data_item)
-		result += re.sub(r"\$({)?(\w+)(?(1)})", data_value_func, text)
-	return result
+def apply_each(match, data):
+	data_key = match.group(1)
+	if data_key in data:
+		data_list = data[match.group(1)]
+		text = match.group(2)
+		result = ""
+		for data_item in data_list:
+			result += re.sub(r"\$({)?(\w+)(?(1)})",
+			                 lambda match: get_data_value(match, data_item),
+			                 text)
+		return result
+	return ""
 
-def get_data_value(data, match):
+def get_data_value(match, data):
 	data_name = match.group(2)
 	if data_name in data:
 		return data[match.group(2)]
 	return ""
 
-def get_template_content(data, match):
+def get_template_content(match, data):
 	template_name = match.group(2)
 	return expand_template(template_name, data).rstrip()
 
@@ -34,14 +36,20 @@ def expand_template(template_name, data):
 		while True:
 			previous_content = template_content
 
-			apply_each_func = functools.partial(apply_each, data)
-			template_content = re.sub(r"{each \$(\w+):(.+)}", apply_each_func, template_content, flags = re.S)
+			# Iterative data substitution
+			template_content = re.sub(r"{each \$(\w+):(.+)}",
+			                          lambda match: apply_each(match, data),
+			                          template_content, flags = re.S)
 
-			template_content_func = functools.partial(get_template_content, data)
-			template_content = re.sub(r"@({)?(\w+)(?(1)})", template_content_func, template_content)
+			# Data substitution
+			template_content = re.sub(r"@({)?(\w+)(?(1)})", 
+			                          lambda match: get_template_content(match, data),
+			                          template_content)
 
-			data_value_func = functools.partial(get_data_value, data)
-			template_content = re.sub(r"\$({)?(\w+)(?(1)})", data_value_func, template_content)
+			# Template inclusion
+			template_content = re.sub(r"\$({)?(\w+)(?(1)})",
+			                          lambda match: get_data_value(match, data),
+			                          template_content)
 
 			if template_content == previous_content:
 				break
