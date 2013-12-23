@@ -11,7 +11,7 @@ def get_data_value(data, match):
 	data_name = match.group(2)
 	if data_name in data:
 		return data[match.group(2)]
-	return match.group(0)
+	return ""
 
 def get_template_content(data, match):
 	template_name = match.group(2)
