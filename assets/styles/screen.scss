@@ -248,18 +248,24 @@ section, article {
 	}
 } 
 
-.stackoverflow-info {
-	@include unstyled-link;
+.related-site {
 	display: block;
 	float: left;
-	width: 150px;
 	margin-right: 1em;
 	margin-bottom: vert(1);
 
-	img {
-		float: left;
+	img:first-child {
 		width: auto;
 		height: vert(3);
+	}
+}
+
+.stackoverflow {
+	@include unstyled-link;
+	width: 190px;
+
+	img:first-child {
+		float: left;
 		margin-right: 0.5em;
 	}
 
@@ -268,20 +274,13 @@ section, article {
 		font-weight: bold;
 	}
 
+	.badge {
+		margin-bottom: 2px;
+	}
+
 	&:hover {
 		color: $link-text-color;
-	}
-}
-
-.github-info {
-	float: left;
-	display: block;
-	margin-right: 1em;
-	margin-bottom: vert(1);
-
-	img {
-		width: auto;
-		height: vert(3);
+		text-decoration: none;
 	}
 }
 
