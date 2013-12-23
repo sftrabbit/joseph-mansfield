@@ -11,3 +11,16 @@ build process includes the following steps:
     static HTML pages.
 3.  **Post-process**: optimize the website with techniques such as minimisation,
     compression, and so on.
+
+Building
+--------
+
+To build, run `build.sh` from a build directory. For example:
+
+    $ mkdir build
+    $ cd build
+    $ ../build.sh
+
+If you create the build directory in the source tree (as in the example) and
+wish to commit some changes you've made, make sure your build directory has been
+added to `.git/info/exclude`.
