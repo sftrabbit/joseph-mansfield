@@ -3,6 +3,9 @@
 import os
 import re
 
+BUILD_DIR = os.getcwd()
+SITE_DIR = BUILD_DIR + "/site"
+
 def get_template_file_name(template_name):
 	return "templates/" + template_name + ".htmt"
 
@@ -66,7 +69,13 @@ def build():
 			'bodyMicrodataMeta': [{'name': 'jobTitle', 'content': 'Computer Science Student'},
 			                      {'name': 'birthDate', 'content': '1990-09-15'}]
 		}
-		print(expand_template("root", home_data))
+		home_content = expand_template("root", home_data)
+
+		if not os.path.exists(SITE_DIR):
+			os.mkdir(SITE_DIR)
+
+		home_file = open(SITE_DIR + "/index.htm", "w")
+		home_file.write(home_content)
 	except IOError as e:
 		print("Template " + e.filename + " does not exist")
 
