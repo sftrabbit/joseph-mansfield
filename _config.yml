@@ -1,0 +1,5 @@
+name: Joseph Mansfield
+pygments: true
+encoding: UTF-8
+permalink: /:categories/:year-:month-:day-:title.html
+exclude: ['README.md']
