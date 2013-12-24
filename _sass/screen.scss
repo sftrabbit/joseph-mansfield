@@ -227,6 +227,15 @@ a {
 	color: $secondary-text-color;
 }
 
+a.secondary {
+	@include hover-link;
+	font-size: $small-font-size;
+
+	&:hover {
+		color: $link-text-color;
+	}
+}
+
 small {
 	@extend .secondary;
 	font-size: $small-font-size;

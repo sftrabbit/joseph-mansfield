@@ -37,9 +37,12 @@ microdata_meta:
 					<section class="column-1 blog-list">
 						<h1>Blog</h1>
 						<ul>
-{% for post in site.categories['blog'] limit:10 %}
+{% assign total_blog_posts = site.categories['blog'].size %}
+{% assign num_blog_posts = 3 %}
+{% for post in site.categories['blog'] limit:num_blog_posts %}
 							<li><time datetime>{{ post.date | date: "%-d %B" }}</time> <a href="{{ post.url }}">{{ post.title }}</a>
 {% endfor %}
 						</ul>
+{% if total_blog_posts > num_blog_posts %}<a href="{{ site.baseurl}}blog/" class="secondary">More blog posts</a>{% endif %}
 					</section>
 				</div>
