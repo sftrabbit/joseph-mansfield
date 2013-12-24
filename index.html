@@ -38,7 +38,7 @@ microdata_meta:
 						<h1>Blog</h1>
 						<ul>
 {% assign total_blog_posts = site.categories['blog'].size %}
-{% assign num_blog_posts = 3 %}
+{% assign num_blog_posts = 5 %}
 {% for post in site.categories['blog'] limit:num_blog_posts %}
 							<li><time datetime>{{ post.date | date: "%-d %B" }}</time> <a href="{{ post.url }}">{{ post.title }}</a>
 {% endfor %}
