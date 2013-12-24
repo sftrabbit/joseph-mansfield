@@ -37,8 +37,9 @@ microdata_meta:
 					<section class="column-1 blog-list">
 						<h1>Blog</h1>
 						<ul>
-							<li><time datetime>18th December</time> <a href="#">Curabitur aliquet arcu purus vel congue nunc imperdiet</a>
-							<li><time datetime>23rd November</time> <a href="#">Donec placerat eu lacus</a>
+{% for post in site.categories['blog'] %}
+							<li><time datetime>{{ post.date | date: "%-d %B" }}</time> <a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
 						</ul>
 					</section>
 				</div>
