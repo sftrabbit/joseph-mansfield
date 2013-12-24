@@ -245,6 +245,17 @@ ul {
 	margin-bottom: 1em;
 }
 
+li {
+	margin-bottom: 0.5em;
+}
+
+li time {
+	@extend .secondary;
+	display: block;
+	font-size: $small-font-size;
+	line-height: 1.4em;
+}
+
 main, section, article {
 	h1 {
 		margin-bottom: vert(1);
@@ -312,15 +323,4 @@ main, section, article {
 		margin-top: 3px;
 		border-bottom: 0px;
 	}
-}
-
-.blog-list time {
-	display: block;
-	font-size: $small-font-size;
-	line-height: 1.4em;
-	font-weight: bold;
-}
-
-.blog-list li {
-	margin-bottom: vert(1);
 }
