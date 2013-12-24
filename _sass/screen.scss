@@ -254,7 +254,7 @@ section, article {
 	margin-right: 1em;
 	margin-bottom: vert(1);
 
-	img:first-child {
+	> img {
 		width: auto;
 		height: vert(3);
 	}
@@ -264,7 +264,7 @@ section, article {
 	@include unstyled-link;
 	width: 190px;
 
-	img:first-child {
+	> img {
 		float: left;
 		margin-right: 0.5em;
 	}
