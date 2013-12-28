@@ -77,6 +77,7 @@ $size-gutter-width: 30px, 30px, 20px, 0px;
 			width: column-width-n(thin, $i);
 		}
 		@media (max-width: 760px) {
+			@include clearfix;
 			margin-bottom: vert(2);
 			width: column-width-n(skinny, $i);
 		}
