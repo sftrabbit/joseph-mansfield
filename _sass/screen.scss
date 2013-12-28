@@ -218,6 +218,10 @@ p {
 	margin: vert(1) 0;
 }
 
+p:first-child {
+	margin-top: 0;
+}
+
 a {
 	@include link-colors($link-text-color);
 	@include hover-link;
