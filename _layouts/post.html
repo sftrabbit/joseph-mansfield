@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-{% include head.html %}
+{% include head.html title_suffix=true %}
 	<body{% if page.microdata_type %} itemscope itemtype="{{ page.microdata_type }}"{% endif %}>
 {% for meta in page.microdata_meta %}
 		<meta itemprop="{{ meta.name }}" content="{{ meta.value }}">
