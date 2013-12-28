@@ -15,7 +15,7 @@ description: Blog of Joseph Mansfield, software developer and computer science s
 						<ul>
 {% endif %}
 
-							<li><time>{{ post.date | date: "%-d %B %Y" }}</time><a href=#>{{ post.title }}</a>
+							<li><time>{{ post.date | date: "%-d %B %Y" }}</time><a href="{{ post.url }}">{{ post.title }}</a>
 
 {% if forloop.last %}
 						</ul>
