@@ -1,0 +1,89 @@
+$size-names: wide, normal, thin, skinny;
+$size-page-width: 1290px, 960px, 700px, auto;
+$size-column-width: 300px, 300px, 220px, auto;
+$size-gutter-width: 30px, 30px, 20px, 0px;
+
+@function page-width($size) {
+	@return nth($size-page-width, index($size-names, $size));
+}
+
+@function column-width($size) {
+	@return nth($size-column-width, index($size-names, $size));
+}
+
+@function gutter-width($size) {
+	@return nth($size-gutter-width, index($size-names, $size));
+}
+
+@function column-width-n($size, $columns: 1) {
+	@if $size == skinny {
+		@return column_width($size);
+	} @else {
+		@return column_width($size) + (column-width($size) + gutter-width($size))
+		                            * ($columns - 1);
+	}
+}
+
+@function column-offset($size, $column) {
+	@return gutter-width($size) + (column-width($size) + gutter-width($size))
+	                            * $column;
+}
+
+@function vert($unit) {
+	@return 1em * $unit;
+}
+
+.row {
+	@include clearfix;
+	margin-bottom: vert(1);
+	margin-left: -(gutter-width(wide));
+
+	@media (max-width: 1350px) {
+		margin-left: -(gutter-width(normal));
+	}
+	@media (max-width: 1020px) {
+		margin-left: -(gutter-width(thin));
+	}
+	@media (max-width: 760px) {
+		margin-left: -(gutter-width(skinny));
+	}
+}
+
+@mixin column {
+	float: left;
+	margin-left: gutter-width(wide);
+
+	@media (max-width: 1350px) {
+		margin-left: gutter-width(normal);
+	}
+	@media (max-width: 1020px) {
+		margin-left: gutter-width(thin);
+	}
+	@media (max-width: 760px) {
+		margin-left: gutter-width(skinny);
+	}
+}
+
+@for $i from 1 through 4 {
+	.column-#{$i} {
+		@include column;
+		margin-bottom: vert(1);
+		width: column-width-n(wide, $i);
+
+		@media (max-width: 1350px) {
+			width: column-width-n(normal, $i);
+		}
+		@media (max-width: 1020px) {
+			width: column-width-n(thin, $i);
+		}
+		@media (max-width: 760px) {
+			margin-bottom: vert(2);
+			width: column-width-n(skinny, $i);
+		}
+	}
+}
+
+@mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}

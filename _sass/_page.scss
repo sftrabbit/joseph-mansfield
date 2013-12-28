@@ -1,0 +1,106 @@
+html {
+	color: $primary-text-color;
+	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+body {
+	@include center;
+	width: page-width(wide);
+	padding: vert(3) 0;
+	background-color: $page-bgcolor;
+
+	> .row {
+		margin-bottom: 0;
+
+		> header {
+			@extend .column-1;
+			text-align: center;
+
+			#logo {
+				width: auto;
+				height: vert(10);
+			}
+
+			nav {
+				margin: vert(1) 0;
+
+				ul li {
+					margin-bottom: vert(0.5);
+				}
+			}
+
+			h1 a {
+				@include unstyled-link;
+				font: $title-font-size $title-font-family;
+			}
+
+			@media (max-width: 1350px) {
+				width: 100%;
+				text-align: left;
+
+				#logo {
+					float: left;
+					margin: 0 1em 1em 0;
+					height: vert(8);
+				}
+
+				> div {
+					margin-top: vert(0.7);
+				}
+
+				nav {
+					margin: vert(0.7) 0;
+
+					ul li {
+						float: left;
+						margin-right: 2em;
+					}
+				}
+			}
+
+			@media (max-width: 760px) {
+				margin-bottom: vert(1);
+
+				#logo {
+					height: vert(6);
+				}
+
+				> div {
+					margin-top: vert(0.1);
+				}
+
+				h1 a {
+					font-size: $skinny-title-font-size;
+				}
+
+				nav ul li {
+					margin-right: 1em;
+				}
+			}
+		}
+
+		> main {
+			margin-bottom: 0;
+		}
+
+		> footer {
+			margin-bottom: 0;
+
+			@media (min-width: 1351px) {
+				margin-left: column-offset(wide, 1);
+			}
+		}
+	}
+
+	@media (max-width: 1350px) {
+		width: page-width(normal);
+	}
+	@media (max-width: 1020px) {
+		width: page-width(thin);
+	}
+	@media (max-width: 760px) {
+		width: page-width(skinny);
+		margin: 0 30px;
+		padding: vert(2) 0;
+	}
+}

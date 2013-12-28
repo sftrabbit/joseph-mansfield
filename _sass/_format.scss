@@ -1,0 +1,95 @@
+main, section, article {
+	h1 {
+		font-size: 1.6em;
+		line-height: 1em;
+		color: $header-text-color;
+	}
+
+	h2 {
+		margin-top: 1em;
+		margin-bottom: 0.4em;
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+} 
+
+article {
+	counter-reset: paragraph;
+}
+
+article > p:not(.post-info):before {
+	position: absolute;
+	counter-increment: paragraph;
+	content: counter(paragraph);
+	font-size: 0.8em;
+	margin-left: -1.5em;
+	color: #999999;
+}
+
+p {
+	margin: vert(1) 0;
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+.post-nav {
+	margin-top: 0;
+}
+
+.post-info {
+	@extend small;
+}
+
+ul {
+	margin: vert(1) 0;
+}
+
+li {
+	margin-bottom: 0.5em;
+}
+
+aside {
+float: left;
+	position: absolute;
+	margin-left: 660px;
+	width: 300px;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+figure {
+	@include clearfix;
+	margin-bottom: vert(1);
+}
+
+figure img, figure pre {
+	float: left;
+}
+
+figcaption {
+	float: left;
+	position: absolute;
+	margin-left: 660px;
+	width: 300px;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+blockquote {
+	margin: 0 4em;
+}
+
+blockquote:before {
+	content: '“';
+	position: absolute;
+	margin-left: -0.7em;
+	margin-top: 0.2em;
+	font-size: 2.6em;
+}
+
+pre {
+	margin-bottom: vert(1);
+	tab-size: 2;
+}
