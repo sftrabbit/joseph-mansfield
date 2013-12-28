@@ -215,7 +215,7 @@ body {
 }
 
 p {
-	margin-bottom: vert(1);
+	margin: vert(1) 0;
 }
 
 a {
@@ -242,7 +242,7 @@ small {
 }
 
 ul {
-	margin-bottom: 1em;
+	margin: vert(1) 0;
 }
 
 li {
@@ -258,7 +258,6 @@ li time {
 
 main, section, article {
 	h1 {
-		margin-bottom: vert(1);
 		font-size: 1.6em;
 		line-height: 1em;
 		color: $header-text-color;
@@ -276,13 +275,21 @@ article {
 	counter-reset: paragraph;
 }
 
-article > p:before {
+article > p:not(.post-info):before {
 	position: absolute;
 	counter-increment: paragraph;
 	content: counter(paragraph);
 	font-size: 0.8em;
 	margin-left: -1.5em;
 	color: #999999;
+}
+
+.post-nav {
+	margin-top: 0;
+}
+.post-info {
+	@extend small;
+
 }
 
 aside {
