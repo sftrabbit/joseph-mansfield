@@ -104,3 +104,14 @@ body {
 		padding: vert(2) 0;
 	}
 }
+
+#contentskip {
+	position: absolute;
+	font-size: $small-font-size;
+	top: -2em;
+	left: 1em;
+
+	&:focus {
+		top: 1em;
+	}
+}
