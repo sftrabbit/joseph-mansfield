@@ -13,19 +13,32 @@ body {
 
 		.title {
 			@include unstyled-link;
-		}
-		.title img {
-			height: 12em;
-			margin: 1em 0;
-		}
 
-		.title h1 {
-			font: $title-font-size $title-font-family;
+			img {
+				height: 12em;
+				margin: 1em 0;
+			}
+
+			h1 {
+				font: $title-font-size $title-font-family;
+			}
+
+			@media (max-width: 760px) {
+				img {
+					height: 8em;
+					margin: 0;
+				}
+
+				h1 {
+					font: $flow-title-font-size $title-font-family;
+				}
+			}
 		}
 	}
 }
 
 .related-resources {
+	@include clearfix;
 	margin-top: 1em;
 	margin-bottom: 0;
 
