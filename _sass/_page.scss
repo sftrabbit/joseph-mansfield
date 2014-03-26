@@ -15,6 +15,7 @@ body {
 			@include unstyled-link;
 
 			img {
+				@include animation(fadeIn);
 				height: 12em;
 				margin: 1em 0;
 			}
@@ -43,8 +44,15 @@ body {
 	margin-bottom: 0;
 
 	li {
+		display: block;
+		width: 51px;
+		height: 51px;
 		margin: 0 0.5em;
 		display: inline-block;
+
+		img:hover {
+			@include animation(wiggle);
+		}
 	}
 }
 
