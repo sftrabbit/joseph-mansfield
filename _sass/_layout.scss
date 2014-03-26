@@ -1,7 +1,7 @@
-$size-names: wide, normal, thin, skinny;
-$size-page-width: 1290px, 960px, 700px, auto;
-$size-column-width: 300px, 300px, 220px, auto;
-$size-gutter-width: 30px, 30px, 20px, 0px;
+$size-names: normal, thin, flow;
+$size-page-width: 960px, 700px, auto;
+$size-column-width: 300px, 220px, auto;
+$size-gutter-width: 30px, 20px, 0px;
 
 @function page-width($size) {
 	@return nth($size-page-width, index($size-names, $size));
@@ -16,7 +16,7 @@ $size-gutter-width: 30px, 30px, 20px, 0px;
 }
 
 @function column-width-n($size, $columns: 1) {
-	@if $size == skinny {
+	@if $size == flow {
 		@return column_width($size);
 	} @else {
 		@return column_width($size) + (column-width($size) + gutter-width($size))
@@ -36,31 +36,25 @@ $size-gutter-width: 30px, 30px, 20px, 0px;
 .row {
 	@include clearfix;
 	margin-bottom: vert(1);
-	margin-left: -(gutter-width(wide));
+	margin-left: -(gutter-width(normal));
 
-	@media (max-width: 1350px) {
-		margin-left: -(gutter-width(normal));
-	}
 	@media (max-width: 1020px) {
 		margin-left: -(gutter-width(thin));
 	}
 	@media (max-width: 760px) {
-		margin-left: -(gutter-width(skinny));
+		margin-left: -(gutter-width(flow));
 	}
 }
 
 @mixin column {
 	float: left;
-	margin-left: gutter-width(wide);
+	margin-left: gutter-width(normal);
 
-	@media (max-width: 1350px) {
-		margin-left: gutter-width(normal);
-	}
 	@media (max-width: 1020px) {
 		margin-left: gutter-width(thin);
 	}
 	@media (max-width: 760px) {
-		margin-left: gutter-width(skinny);
+		margin-left: gutter-width(flow);
 	}
 }
 
@@ -68,18 +62,28 @@ $size-gutter-width: 30px, 30px, 20px, 0px;
 	.column-#{$i} {
 		@include column;
 		margin-bottom: vert(1);
-		width: column-width-n(wide, $i);
+		width: column-width-n(normal, $i);
 
-		@media (max-width: 1350px) {
-			width: column-width-n(normal, $i);
-		}
 		@media (max-width: 1020px) {
 			width: column-width-n(thin, $i);
 		}
 		@media (max-width: 760px) {
 			@include clearfix;
 			margin-bottom: vert(2);
-			width: column-width-n(skinny, $i);
+			width: column-width-n(flow, $i);
+		}
+	}
+}
+
+@for $i from 1 through 2 {
+	.offset-#{$i} {
+		margin-left: column-offset(normal, $i);
+
+		@media (max-width: 1020px) {
+			margin-left: column-offset(thin, $i);
+		}
+		@media (max-width: 760px) {
+			margin-left: 0;
 		}
 	}
 }
