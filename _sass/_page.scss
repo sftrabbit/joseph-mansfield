@@ -1,14 +1,14 @@
 html {
-	background-color: $page-bgcolor-alt;
 	color: $primary-text-color;
 	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
 }
 
 body {
+	background-color: $page-bgcolor;
+
 	> header {
-		margin-top: 8px;
+		border-top: 8px solid $page-bgcolor-alt;
 		padding: 2em 30px 0 30px;
-		background-color: $page-bgcolor;
 		text-align: center;
 
 		.title {
@@ -67,7 +67,8 @@ main {
 }
 
 footer {
-	margin: 2em 0;
+	padding: 2em 0;
+	background-color: $page-bgcolor-alt;
 	color: $primary-text-color-alt;
 	font-size: $small-font-size;
 }
