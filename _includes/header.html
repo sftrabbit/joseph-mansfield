@@ -1,7 +1,14 @@
-			<header>
-				<a id="contentskip" href="#content">Skip to content</a>
-				<img id="logo" src="{{ site.baseurl }}images/logo.svg" alt>
-				<div>
-					<h1><a href="{{ site.baseurl }}"{% if page.microdata_type == 'http://schema.org/Person' %} itemprop="name"{% endif %}>Joseph Mansfield</a></h1>
-				</div>
-			</header>
+		<header>
+			<a id="contentskip" href="#content">Skip to content</a>
+			<a class="title" href="{{ site.baseurl }}"{% if page.microdata_type == 'http://schema.org/Person' %} itemprop="name"{% endif %}>
+				<img src="{{ site.baseurl }}images/logo.svg" alt="">
+				<h1>Joseph Mansfield</h1>	
+			</a>
+			<ul class="related-resources">
+				<li><a href="#"><img src="#" alt="GitHub"></a></li>
+				<li><a href="#"><img src="#" alt="Stack Overflow"></a></li>
+				<li><a href="#"><img src="#" alt="Google+"></a></li>
+				<li><a href="#"><img src="#" alt="Twitter"></a></li>
+				<li><a href="#"><img src="#" alt="LinkedIn"></a></li>
+			</ul>
+		</header>
