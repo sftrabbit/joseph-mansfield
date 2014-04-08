@@ -54,6 +54,11 @@ body {
 		margin: 1em 0.5em 0 0.5em;
 		display: inline-block;
 
+		img {
+			width: 51px;
+			height: 51px;
+		}
+
 		img:hover {
 			@include animation(wiggle);
 		}
