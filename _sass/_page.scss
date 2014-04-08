@@ -101,3 +101,8 @@ footer {
 		top: 1em;
 	}
 }
+
+::selection {
+	background: #aecf4a;
+	color: #fff;
+}
