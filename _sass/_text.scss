@@ -48,3 +48,9 @@ li time {
 	font-size: $small-font-size;
 	line-height: 1.4em;
 }
+
+footer {
+	a {
+		color: $link-text-color-alt;
+	}
+}
