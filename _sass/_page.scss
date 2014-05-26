@@ -65,6 +65,20 @@ body {
 	}
 }
 
+.cv {
+	img {
+		margin: 0.5em auto 0.7em auto;
+		display: block;
+		box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.05);
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	text-align: center;
+}
+
 main {
 	padding: 3em 0 2em 0;
 	background-color: $page-bgcolor;

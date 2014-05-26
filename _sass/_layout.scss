@@ -1,6 +1,6 @@
 $size-names: normal, thin, flow;
 $size-page-width: 960px, 700px, auto;
-$size-column-width: 300px, 220px, auto;
+$size-column-width: 300px, 220px, 100%;
 $size-gutter-width: 30px, 20px, 0px;
 
 @function page-width($size) {
@@ -40,6 +40,10 @@ $size-gutter-width: 30px, 20px, 0px;
 	@media (max-width: 760px) {
 		margin-left: -(gutter-width(flow));
 	}
+}
+
+.row:last-child {
+	margin-bottom: 0;
 }
 
 @mixin column {
