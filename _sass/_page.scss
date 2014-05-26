@@ -1,5 +1,5 @@
 html {
-	color: $primary-text-color;
+	color: $text-color;
 	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
 }
 
@@ -86,11 +86,11 @@ main {
 footer {
 	padding: 2em 0;
 	background-color: $page-bgcolor-alt;
-	color: $primary-text-color-alt;
+	color: $text-color-alt;
 	font-size: $small-font-size;
 }
 
-#contentskip {
+.contentskip {
 	position: absolute;
 	font-size: $small-font-size;
 	padding: 0 1em; 

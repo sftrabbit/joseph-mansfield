@@ -1,5 +1,5 @@
 .secondary {
-	color: $secondary-text-color;
+	color: $text-color-secondary;
 }
 
 small {
@@ -29,7 +29,7 @@ code {
 }
 
 a {
-	@include link-colors($link-text-color);
+	@include link-colors($link-color);
 	@include hover-link;
 }
 
@@ -38,7 +38,7 @@ a.secondary {
 	font-size: $small-font-size;
 
 	&:hover {
-		color: $link-text-color;
+		color: $link-color;
 	}
 }
 
@@ -51,6 +51,6 @@ li time {
 
 footer {
 	a {
-		color: $link-text-color-alt;
+		color: $link-color-alt;
 	}
 }
