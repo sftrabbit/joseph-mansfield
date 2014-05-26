@@ -1,0 +1,126 @@
+html {
+	color: $text-color;
+	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+body {
+	background-color: $page-bgcolor-alt;
+
+	> div {
+		background-color: $page-bgcolor;
+
+		> header {
+			border-top: 8px solid $page-bgcolor-alt;
+			padding: 2em 30px 0 30px;
+			text-align: center;
+
+			.title {
+				@include unstyled-link;
+
+				img {
+					@include animation(fadeIn);
+					height: 12em;
+					margin-top: 1em;
+				}
+
+				h1 {
+					font: $title-font-size $title-font-family;
+				}
+
+				@media (max-width: 760px) {
+					img {
+						height: 8em;
+						margin: 0;
+					}
+
+					h1 {
+						font: $flow-title-font-size $title-font-family;
+					}
+				}
+			}
+		}
+	}
+}
+
+.related-resources {
+	@include clearfix;
+	margin-top: 1em;
+	margin-bottom: 0;
+
+	li {
+		display: block;
+		width: 51px;
+		height: 51px;
+		margin: 1em 0.5em 0 0.5em;
+		display: inline-block;
+
+		img {
+			width: 51px;
+			height: 51px;
+		}
+
+		img:hover {
+			@include animation(wiggle);
+		}
+	}
+}
+
+.cv {
+	img {
+		margin: 0.3em auto 0.7em auto;
+		display: block;
+		box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.05);
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	text-align: center;
+}
+
+.social-buttons {
+	text-align: right;
+}
+
+main {
+	padding: 3em 0 2em 0;
+	background-color: $page-bgcolor;
+}
+
+.page {
+	@include center;
+	width: page-width(normal);
+
+	@media (max-width: 1020px) {
+		width: page-width(thin);
+	}
+	@media (max-width: 760px) {
+		width: page-width(flow);
+		margin: 0 30px;
+	}
+}
+
+footer {
+	padding: 2em 0;
+	background-color: $page-bgcolor-alt;
+	color: $text-color-alt;
+	font-size: $small-font-size;
+}
+
+.contentskip {
+	position: absolute;
+	font-size: $small-font-size;
+	padding: 0 1em; 
+	top: -2em;
+	left: 1em;
+
+	&:focus {
+		top: 1em;
+	}
+}
+
+::selection {
+	background: #aecf4a;
+	color: #fff;
+}

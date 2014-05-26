@@ -1,0 +1,94 @@
+$size-names: normal, thin, flow;
+$size-page-width: 960px, 700px, auto;
+$size-column-width: 300px, 220px, 100%;
+$size-gutter-width: 30px, 20px, 0px;
+
+@function page-width($size) {
+	@return nth($size-page-width, index($size-names, $size));
+}
+
+@function column-width($size) {
+	@return nth($size-column-width, index($size-names, $size));
+}
+
+@function gutter-width($size) {
+	@return nth($size-gutter-width, index($size-names, $size));
+}
+
+@function column-width-n($size, $columns: 1) {
+	@if $size == flow {
+		@return column_width($size);
+	} @else {
+		@return column_width($size) + (column-width($size) + gutter-width($size))
+		                            * ($columns - 1);
+	}
+}
+
+@function column-offset($size, $column) {
+	@return gutter-width($size) + (column-width($size) + gutter-width($size))
+	                            * $column;
+}
+
+.row {
+	@include clearfix;
+	margin-bottom: 1em;
+	margin-left: -(gutter-width(normal));
+
+	@media (max-width: 1020px) {
+		margin-left: -(gutter-width(thin));
+	}
+	@media (max-width: 760px) {
+		margin-left: -(gutter-width(flow));
+	}
+}
+
+.row:last-child {
+	margin-bottom: 0;
+}
+
+@mixin column {
+	float: left;
+	margin-left: gutter-width(normal);
+
+	@media (max-width: 1020px) {
+		margin-left: gutter-width(thin);
+	}
+	@media (max-width: 760px) {
+		margin-left: gutter-width(flow);
+	}
+}
+
+@for $i from 1 through 4 {
+	.column-#{$i} {
+		@include column;
+		margin-bottom: 1em;
+		width: column-width-n(normal, $i);
+
+		@media (max-width: 1020px) {
+			width: column-width-n(thin, $i);
+		}
+		@media (max-width: 760px) {
+			@include clearfix;
+			margin-bottom: 2em;
+			width: column-width-n(flow, $i);
+		}
+	}
+}
+
+@for $i from 1 through 2 {
+	.offset-#{$i} {
+		margin-left: column-offset(normal, $i);
+
+		@media (max-width: 1020px) {
+			margin-left: column-offset(thin, $i);
+		}
+		@media (max-width: 760px) {
+			margin-left: 0;
+		}
+	}
+}
+
+@mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}

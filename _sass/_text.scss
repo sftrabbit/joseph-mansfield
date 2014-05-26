@@ -1,0 +1,56 @@
+.secondary {
+	color: $text-color-secondary;
+}
+
+small {
+	@extend .secondary;
+	font-size: $small-font-size;
+}
+
+em, i {
+	font-style: italic;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+u {
+	text-decoration: underline;
+}
+
+mark {
+	background-color: #FFF68C;
+	padding: 0 0.2em;
+}
+
+code {
+	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
+}
+
+a {
+	@include link-colors($link-color);
+	@include hover-link;
+}
+
+a.secondary {
+	@include hover-link;
+	font-size: $small-font-size;
+
+	&:hover {
+		color: $link-color;
+	}
+}
+
+li time {
+	@extend .secondary;
+	display: block;
+	font-size: $small-font-size;
+	line-height: 1.4em;
+}
+
+footer {
+	a {
+		color: $link-color-alt;
+	}
+}
