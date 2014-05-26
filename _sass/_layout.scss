@@ -29,13 +29,9 @@ $size-gutter-width: 30px, 20px, 0px;
 	                            * $column;
 }
 
-@function vert($unit) {
-	@return 1em * $unit;
-}
-
 .row {
 	@include clearfix;
-	margin-bottom: vert(1);
+	margin-bottom: 1em;
 	margin-left: -(gutter-width(normal));
 
 	@media (max-width: 1020px) {
@@ -61,7 +57,7 @@ $size-gutter-width: 30px, 20px, 0px;
 @for $i from 1 through 4 {
 	.column-#{$i} {
 		@include column;
-		margin-bottom: vert(1);
+		margin-bottom: 1em;
 		width: column-width-n(normal, $i);
 
 		@media (max-width: 1020px) {
@@ -69,7 +65,7 @@ $size-gutter-width: 30px, 20px, 0px;
 		}
 		@media (max-width: 760px) {
 			@include clearfix;
-			margin-bottom: vert(2);
+			margin-bottom: 2em;
 			width: column-width-n(flow, $i);
 		}
 	}
