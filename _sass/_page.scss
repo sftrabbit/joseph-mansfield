@@ -20,6 +20,8 @@ body {
 				img {
 					@include animation(fadeIn);
 					float: left;
+					margin: 4px 1em 0 0;
+					height: 2.0em;
 				}
 
 				h1 {
