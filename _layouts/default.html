@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 {% include head.html %}
-	<body{% if page.microdata_type %} itemscope itemtype="{{ page.microdata_type }}"{% endif %}>{% for meta in page.microdata_meta %}
+	<body{% if page.class %} class="{{ page.class }}"{% endif %}{% if page.microdata_type %} itemscope itemtype="{{ page.microdata_type }}"{% endif %}>{% for meta in page.microdata_meta %}
 		<meta itemprop="{{ meta.name }}" content="{{ meta.value }}">{% endfor %}
 		<div class="container">
 {% include header.html %}
