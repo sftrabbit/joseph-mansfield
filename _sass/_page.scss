@@ -82,6 +82,8 @@ body {
 		margin: 0.2em 0.2em 0.2em 0.2em;
 
 		img {
+			@include opacity(0.5);
+
 			width: 34px;
 			height: 34px;
 		}
@@ -104,6 +106,7 @@ body.index {
 			margin: 1em 0.5em 0 0.5em;
 
 			img {
+				@include opacity(1.0);
 				width: 51px;
 				height: 51px;
 			}
