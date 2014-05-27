@@ -10,31 +10,58 @@ body {
 		background-color: $page-bgcolor;
 
 		> header {
-			border-top: 8px solid $page-bgcolor-alt;
-			padding: 2em 30px 0 30px;
-			text-align: center;
+			@include clearfix;
+			padding: 8px 0;
+			background-color: $page-bgcolor-alt;
 
 			.title {
 				@include unstyled-link;
 
 				img {
 					@include animation(fadeIn);
-					height: 12em;
-					margin-top: 1em;
+					float: left;
 				}
 
 				h1 {
+					float: left;
+					margin-top: 2px;
 					font: $title-font-size $title-font-family;
+					color: $text-color-alt;
 				}
+			}
+		}
+	}
 
-				@media (max-width: 760px) {
+	&.index {
+		> div {
+			> header {
+				background-color: transparent;
+				border-top: 8px solid $page-bgcolor-alt;
+				padding: 2em 30px 0 30px;
+				text-align: center;
+
+				.title {
 					img {
-						height: 8em;
-						margin: 0;
+						float: none;
+						height: 12em;
+						margin-top: 1em;
 					}
 
 					h1 {
-						font: $flow-title-font-size $title-font-family;
+						float: none;
+						font: $index-title-font-size $title-font-family;
+						color: $text-color;
+					}
+
+					@media (max-width: 760px) {
+						img {
+							height: 8em;
+							margin: 0;
+						}
+
+						h1 {
+							font: $flow-title-font-size $title-font-family;
+						}
 					}
 				}
 			}
@@ -44,23 +71,40 @@ body {
 
 .related-resources {
 	@include clearfix;
-	margin-top: 1em;
-	margin-bottom: 0;
+	float: right;
 
 	li {
-		display: block;
-		width: 51px;
-		height: 51px;
-		margin: 1em 0.5em 0 0.5em;
 		display: inline-block;
+		width: 34px;
+		height: 34px;
+		margin: 0.2em 0.2em 0.2em 0.2em;
 
 		img {
-			width: 51px;
-			height: 51px;
+			width: 34px;
+			height: 34px;
 		}
 
 		img:hover {
 			@include animation(wiggle);
+		}
+	}
+}
+
+body.index {
+	.related-resources {
+		float: none;
+		margin-top: 1em;
+		margin-bottom: 0;
+
+		li {
+			width: 51px;
+			height: 51px;
+			margin: 1em 0.5em 0 0.5em;
+
+			img {
+				width: 51px;
+				height: 51px;
+			}
 		}
 	}
 }
