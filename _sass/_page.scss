@@ -92,6 +92,10 @@ body {
 			@include animation(wiggle);
 		}
 	}
+
+	@media (max-width: 760px) {
+		display: none;
+	}
 }
 
 body.index {
@@ -110,6 +114,10 @@ body.index {
 				width: 51px;
 				height: 51px;
 			}
+		}
+
+		@media (max-width: 760px) {
+			display: block;
 		}
 	}
 }
