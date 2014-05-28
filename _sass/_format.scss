@@ -6,6 +6,22 @@ p:first-child {
 	margin-top: 0;
 }
 
+@mixin sidebar() {
+	@media (min-width: 1021px) {
+		float: left;
+		position: absolute;
+		margin-left: column-offset(normal, 2) - gutter-width(normal);
+		width: column-width(normal);
+	}
+
+	@media (max-width: 1020px) and (min-width: 761px) {
+		float: left;
+		position: absolute;
+		margin-left: column-offset(thin, 2) - gutter-width(thin);
+		width: column-width(thin);
+	}
+}
+
 article { 
 	> h1 {
 		font-size: 1.6em;
@@ -21,10 +37,7 @@ article {
 	}
 
 	aside {
-		float: left;
-		position: absolute;
-		margin-left: 660px;
-		width: 300px;
+		@include sidebar;
 		font-size: 0.8em;
 		line-height: 1.4em;
 	}
@@ -35,16 +48,12 @@ article {
 	}
 
 	figure img, figure pre {
-		width: 100%;
-		max-width: 630px;
 		float: left;
+		width: 100%;
 	}
 
 	figcaption {
-		float: left;
-		position: absolute;
-		margin-left: 660px;
-		width: 300px;
+		@include sidebar;
 		font-size: 0.8em;
 		line-height: 1.4em;
 	}
