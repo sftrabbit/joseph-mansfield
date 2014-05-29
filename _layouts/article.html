@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
-{% include head.html %}
+	<head>
+		<title>{{ page.title }} by Joseph Mansfield</title>
+{% include meta.html %}
+	</head>
 	<body{% if page.class %} class="{{ page.class }}"{% endif %}>
 		<div class="container">
 {% include header.html %}
