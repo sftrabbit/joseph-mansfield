@@ -25,4 +25,19 @@ microdata_meta:
 						</a>
 					</div>
 				</div>
+				<div class="row">
+					<div class="column-2">
+						<ul class="article-list">
+{% for article in site.categories.articles limit:3 %}
+							<li>
+								<article>
+									<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+									<p class="secondary">{{ article.description }}</p>
+									<p><a href="{{ article.url }}">Read article →</a></p>
+								</article>
+							</li>
+{% endfor %}
+						</ul>
+					</div>
+				</div>
 			</div>

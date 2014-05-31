@@ -46,6 +46,10 @@ a.secondary {
 	}
 }
 
+h1 a {
+	@include link-colors($header-color);
+}
+
 li time {
 	@extend .secondary;
 	display: block;

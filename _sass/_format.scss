@@ -65,3 +65,15 @@ article {
 		line-height: 1.4em;
 	}
 }
+
+.article-list {
+	list-style-type: none;
+
+	li {
+		margin-bottom: 3em;
+	}
+
+	li:last-child {
+		margin: 0;
+	}
+}
