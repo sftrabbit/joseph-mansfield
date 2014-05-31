@@ -18,6 +18,17 @@
 {{ content }}
 						</article>
 					</div>
+					<div class="row">
+						<div class="column-2">
+							<p><b>Want something else to read?</b></p>
+{% assign related_article = site.related_posts[0] %}
+							<article>
+								<h1><a href="{{ related_article.url }}">{{ related_article.title }}</a></h1>
+								<p class="secondary">{{ related_article.description }}</p>
+								<p><a href="{{ related_article.url }}">Read {% if related_article.tags != empty %}this {{ related_article.tags[0] }}{% endif %} article →</p>
+							</article>
+						</div>
+					</div>
 				</div>
 			</main>
 {% include footer.html %}
