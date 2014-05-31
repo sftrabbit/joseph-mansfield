@@ -33,7 +33,7 @@ microdata_meta:
 								<article>
 									<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
 									<p class="secondary">{{ article.description }}</p>
-									<p><a href="{{ article.url }}">Read article →</a></p>
+									<p><a href="{{ article.url }}">Read {% if article.tags != empty %}this {{ article.tags[0] }}{% endif %} article →</a></p>
 								</article>
 							</li>
 {% endfor %}
