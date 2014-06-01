@@ -24,6 +24,10 @@ mark {
 	padding: 0 0.2em;
 }
 
+pre {
+	tab-size: 2;
+}
+
 code {
 	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
 }
@@ -40,6 +44,10 @@ a.secondary {
 	&:hover {
 		color: $link-color;
 	}
+}
+
+h1 a {
+	@include link-colors($header-color);
 }
 
 li time {

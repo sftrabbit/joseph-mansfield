@@ -1,0 +1,38 @@
+---
+layout: default
+title: Joseph Mansfield's articles
+description: Software developer and computer science student at the University of York.
+---
+			<div class="page">
+				<div class="row">
+					<div class="column-2">
+						<ul class="article-list">
+{% for article in site.categories.articles limit:2 %}
+							<li>
+								<article>
+									<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+									<p class="secondary">{{ article.description }}</p>
+									<p><a href="{{ article.url }}">Read {% if article.tags != empty %}this {{ article.tags[0] }}{% endif %} article →</a></p>
+								</article>
+							</li>
+{% endfor %}
+						</ul>
+					</div>
+					<section class="column-1">
+						<h1>Hear about new articles</h1>
+						<p class="secondary">Subscribe to <a href="#">the RSS/Atom feed</a> with your favourite news feed reader.</p>
+					</section>
+				</div>
+				<div class="row">
+					<div class="column-2">
+{% for tag in site.tags %}
+						<p><b>{{ tag | first }} articles</b></p>
+						<ul>
+{% for article in tag[1] %}
+							<li><a href="{{ article.url }}">{{ article.title }}</a></li>
+{% endfor %}
+						</ul>
+{% endfor %}
+					</div>
+				</div>
+			</div>

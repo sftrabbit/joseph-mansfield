@@ -5,3 +5,81 @@ p {
 p:first-child {
 	margin-top: 0;
 }
+
+@mixin sidebar() {
+	@media (min-width: 1021px) {
+		float: left;
+		position: absolute;
+		margin-left: column-offset(normal, 2) - gutter-width(normal);
+		width: column-width(normal);
+	}
+
+	@media (max-width: 1020px) and (min-width: 761px) {
+		float: left;
+		position: absolute;
+		margin-left: column-offset(thin, 2) - gutter-width(thin);
+		width: column-width(thin);
+	}
+}
+
+section h1 {
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+article { 
+	> h1, > header h1 {
+		font-size: 1.6em;
+		font-weight: 700;
+		line-height: 1em;
+		color: $header-color;
+	}
+
+	section h1 {
+		margin-top: 2em;
+		font-size: 1.2em;
+		font-weight: 700;
+		line-height: 1em;
+		color: $text-color;
+	}
+
+	aside {
+		@include sidebar;
+		font-size: 0.8em;
+		line-height: 1.4em;
+		color: $text-color-secondary;
+	}
+
+	figure {
+		@include clearfix;
+		margin-bottom: 1em;
+	}
+
+	figure img, figure pre {
+		float: left;
+		width: 100%;
+	}
+
+	pre {
+		overflow: auto;
+	}
+
+	figcaption {
+		@include sidebar;
+		font-size: 0.8em;
+		line-height: 1.4em;
+		color: $text-color-secondary;
+	}
+}
+
+.article-list {
+	list-style-type: none;
+
+	li {
+		margin-bottom: 3em;
+	}
+
+	li:last-child {
+		margin: 0;
+	}
+}

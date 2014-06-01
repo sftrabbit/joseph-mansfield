@@ -31,7 +31,7 @@ $size-gutter-width: 30px, 20px, 0px;
 
 .row {
 	@include clearfix;
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 	margin-left: -(gutter-width(normal));
 
 	@media (max-width: 1020px) {
