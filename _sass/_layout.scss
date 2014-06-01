@@ -1,8 +1,8 @@
 $size-names: normal, thin, flow;
 $size-upper-limit: 10000px, 1020px, 760px;
 $size-page-width: 960px, 700px, auto;
-$size-column-width: 300px, 220px, 100%;
-$size-gutter-width: 30px, 20px, 0px;
+$size-column-width: 290px, 210px, 100%;
+$size-gutter-width: 45px, 35px, 0px;
 
 @function upper-limit($size) {
 	@return nth($size-upper-limit, index($size-names, $size));
