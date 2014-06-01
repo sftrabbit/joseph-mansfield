@@ -166,17 +166,9 @@ footer {
 }
 
 .josephmansfield-article {
-	display: inline-block;
-	width: column-width-n(normal, 2);
+	@extend .column-2;
+
 	height: 98px;
-
-	@media (max-width: upper-limit(thin)) {
-		width: column-width-n(thin, 2);
-	}
-
-	@media (max-width: upper-limit(flow)) {
-		width: column-width-n(flow, 2);
-	}
 }
 
 .contentskip {
