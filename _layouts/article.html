@@ -23,23 +23,23 @@
 						</article>
 					</div>
 					<div class="row">
-						<div class="column-2">
-							<p><b>Want something else to read?</b></p>
+						<section class="column-2">
+							<h1>Want something else to read?</h1>
 {% assign related_article = site.related_posts[0] %}
 							<article>
 								<h1><a href="{{ related_article.url }}">{{ related_article.title }}</a></h1>
 								<p class="secondary">{{ related_article.description }}</p>
 								<p><a href="{{ related_article.url }}">Read {% if related_article.tags != empty %}this {{ related_article.tags[0] }}{% endif %} article →</a></p>
 							</article>
-						</div>
-						<div class="column-1">
-							<p><b>Share this article</b></p>
+						</section>
+						<section class="column-1">
+							<h1>Share this article</h1>
 							<ul>
 								<li><div class="g-plus" data-action="share" data-annotation="bubble" data-height="24">Share on Google+</div></li>
 								<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Read “{{ page.title }}”, a {{ page.tags[0] }} article by Joseph Mansfield" data-size="large" data-via="sftrabbit">Share on Twitter</a></li>
 								<li><div class="fb-like" data-href="{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></li>
 							</ul>
-						</div>
+						</section>
 					</div>
 					<div class="row">
 						<div class="column-2">
