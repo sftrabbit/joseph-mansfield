@@ -7,14 +7,14 @@ p:first-child {
 }
 
 @mixin sidebar() {
-	@media (min-width: 1021px) {
+	@media (min-width: upper-limit(thin) + 1) {
 		float: left;
 		position: absolute;
 		margin-left: column-offset(normal, 2) - gutter-width(normal);
 		width: column-width(normal);
 	}
 
-	@media (max-width: 1020px) and (min-width: 761px) {
+	@media (max-width: upper-limit(thin)) and (min-width: upper-limit(flow) + 1) {
 		float: left;
 		position: absolute;
 		margin-left: column-offset(thin, 2) - gutter-width(thin);

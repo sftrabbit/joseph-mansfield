@@ -1,7 +1,12 @@
 $size-names: normal, thin, flow;
+$size-upper-limit: 10000px, 1020px, 760px;
 $size-page-width: 960px, 700px, auto;
 $size-column-width: 300px, 220px, 100%;
 $size-gutter-width: 30px, 20px, 0px;
+
+@function upper-limit($size) {
+	@return nth($size-upper-limit, index($size-names, $size));
+}
 
 @function page-width($size) {
 	@return nth($size-page-width, index($size-names, $size));
@@ -34,10 +39,10 @@ $size-gutter-width: 30px, 20px, 0px;
 	margin-bottom: 3em;
 	margin-left: -(gutter-width(normal));
 
-	@media (max-width: 1020px) {
+	@media (max-width: upper-limit(thin)) {
 		margin-left: -(gutter-width(thin));
 	}
-	@media (max-width: 760px) {
+	@media (max-width: upper-limit(flow)) {
 		margin-left: -(gutter-width(flow));
 	}
 }
@@ -50,10 +55,10 @@ $size-gutter-width: 30px, 20px, 0px;
 	float: left;
 	margin-left: gutter-width(normal);
 
-	@media (max-width: 1020px) {
+	@media (max-width: upper-limit(thin)) {
 		margin-left: gutter-width(thin);
 	}
-	@media (max-width: 760px) {
+	@media (max-width: upper-limit(flow)) {
 		margin-left: gutter-width(flow);
 	}
 }
@@ -64,10 +69,10 @@ $size-gutter-width: 30px, 20px, 0px;
 		margin-bottom: 1em;
 		width: column-width-n(normal, $i);
 
-		@media (max-width: 1020px) {
+		@media (max-width: upper-limit(thin)) {
 			width: column-width-n(thin, $i);
 		}
-		@media (max-width: 760px) {
+		@media (max-width: upper-limit(flow)) {
 			@include clearfix;
 			margin-bottom: 2em;
 			width: column-width-n(flow, $i);
@@ -79,10 +84,10 @@ $size-gutter-width: 30px, 20px, 0px;
 	.offset-#{$i} {
 		margin-left: column-offset(normal, $i);
 
-		@media (max-width: 1020px) {
+		@media (max-width: upper-limit(thin)) {
 			margin-left: column-offset(thin, $i);
 		}
-		@media (max-width: 760px) {
+		@media (max-width: upper-limit(flow)) {
 			margin-left: 0;
 		}
 	}

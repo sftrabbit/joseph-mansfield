@@ -149,10 +149,10 @@ main {
 	@include center;
 	width: page-width(normal);
 
-	@media (max-width: 1020px) {
+	@media (max-width: upper-limit(thin)) {
 		width: page-width(thin);
 	}
-	@media (max-width: 760px) {
+	@media (max-width: upper-limit(flow)) {
 		width: page-width(flow);
 		margin: 0 30px;
 	}
@@ -170,11 +170,11 @@ footer {
 	width: column-width-n(normal, 2);
 	height: 98px;
 
-	@media (max-width: 1020px) {
+	@media (max-width: upper-limit(thin)) {
 		width: column-width-n(thin, 2);
 	}
 
-	@media (max-width: 760px) {
+	@media (max-width: upper-limit(flow)) {
 		width: column-width-n(flow, 2);
 	}
 }
