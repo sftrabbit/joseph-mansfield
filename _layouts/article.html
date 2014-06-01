@@ -3,6 +3,10 @@
 	<head>
 		<title>{{ page.title }} by Joseph Mansfield</title>
 {% include meta.html %}
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:creator" content="@sftrabbit">
+		<meta name="twitter:title" content="{{ page.title }}">
+		<meta name="twitter:description" content="{{ page.description }}">
 	</head>
 	<body{% if page.class %} class="{{ page.class }}"{% endif %}>
 		<div class="container">
