@@ -165,6 +165,20 @@ footer {
 	font-size: $small-font-size;
 }
 
+.josephmansfield-article {
+	display: inline-block;
+	width: column-width-n(normal, 2);
+	height: 98px;
+
+	@media (max-width: 1020px) {
+		width: column-width-n(thin, 2);
+	}
+
+	@media (max-width: 760px) {
+		width: column-width-n(flow, 2);
+	}
+}
+
 .contentskip {
 	position: absolute;
 	font-size: $small-font-size;
