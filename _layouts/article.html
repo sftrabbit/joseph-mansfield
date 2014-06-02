@@ -28,15 +28,17 @@
 			<div class="alt">
 				<div class="container">
 					<div class="row">
+{% assign related_article = site.related_posts[0] %}
+{% if related_article != nil %}
 						<section class="column-2">
 							<h1>Want something else to read?</h1>
-{% assign related_article = site.related_posts[0] %}
 							<article>
 								<h1><a href="{{ related_article.url }}">{{ related_article.title }}</a></h1>
 								<p class="secondary">{{ related_article.description }}</p>
 								<p><a href="{{ related_article.url }}">Read {% if related_article.tags != empty %}this {{ related_article.tags[0] }}{% endif %} article →</a></p>
 							</article>
 						</section>
+{% endif %}
 						<section class="column-1">
 							<h1>Share this article</h1>
 							<ul class="share-buttons">
