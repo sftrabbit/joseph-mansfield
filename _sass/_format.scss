@@ -108,6 +108,14 @@ ol {
 	}
 }
 
+ul.share-buttons {
+	list-style-type: none;
+
+	li {
+		margin: 0;
+	}
+}
+
 .josephmansfield-article {
 	@extend .column-2;
 
