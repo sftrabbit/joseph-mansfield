@@ -46,6 +46,19 @@ a.secondary {
 	}
 }
 
+a.button {
+	@include border-radius(5px);
+
+	display: inline-block;
+	padding: 0.5em 1em;
+	background-color: $button-color;
+	color: $text-color-alt;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 h1 a {
 	@include link-colors($header-color);
 }
