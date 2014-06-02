@@ -57,7 +57,7 @@ body {
 				}
 			}
 		
-			@media (max-width: 760px) {
+			@media (max-width: upper-limit(flow)) {
 				display: none;
 			}
 		}
