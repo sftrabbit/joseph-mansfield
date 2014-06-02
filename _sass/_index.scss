@@ -1,7 +1,7 @@
 body.index {
 	> header {
 		padding: 2.5em 0 1em 0;
-		background-color: transparent;
+		background-color: $bgcolor;
 		border-top: 8px solid $bgcolor-running;
 		text-align: center;
 

@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background-color: $bgcolor;
+	background-color: $bgcolor-running;
 
 	> header {
 		@include clearfix;
@@ -61,6 +61,10 @@ body {
 				display: none;
 			}
 		}
+	}
+
+	main {
+		background-color: $bgcolor;
 	}
 
 	> footer {
