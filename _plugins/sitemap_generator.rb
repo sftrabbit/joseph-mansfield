@@ -47,11 +47,11 @@ module Jekyll
   SITEMAP_FILE_NAME = "sitemap.xml"
 
   # Any files to exclude from being included in the sitemap.xml
-  EXCLUDED_FILES = ["atom.xml"]
+  EXCLUDED_FILES = ["articles/rss.xml", "404.html"]
 
   # Any files that include posts, so that when a new post is added, the last
   # modified date of these pages should take that into account
-  PAGES_INCLUDE_POSTS = ["index.html", "articles/index.html", "blog/index.html"]
+  PAGES_INCLUDE_POSTS = ["index.html", "articles/index.html"]
 
   # Custom variable names for changefreq and priority elements
   # These names are used within the YAML Front Matter of pages or posts
