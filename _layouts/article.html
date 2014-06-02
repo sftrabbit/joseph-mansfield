@@ -9,49 +9,47 @@
 		<meta name="twitter:description" content="{{ page.description }}">
 	</head>
 	<body{% if page.class %} class="{{ page.class }}"{% endif %}>
-		<div class="container">
 {% include header.html %}
-			<main id="content">
-				<div class="page">
-					<div class="row">
-						<article class="column-2" itemscope itemtype="http://schema.org/TechArticle">
-							<header>
-								<h1 itemprop="headline">{{ page.title }}</h1>
-							</header>
-							<p class="secondary">{{ page.description }}</p>
+		<main id="content">
+			<div class="container">
+				<div class="row">
+					<article class="column-2" itemscope itemtype="http://schema.org/TechArticle">
+						<header>
+							<h1 itemprop="headline">{{ page.title }}</h1>
+						</header>
+						<p class="secondary">{{ page.description }}</p>
 {{ content }}
-						</article>
-					</div>
+					</article>
+				</div>
+				<div class="row">
+					<ins class="adsbygoogle josephmansfield-article" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334" data-adtest="on"></ins>
+				</div>
+			</div>
+			<div class="alt">
+				<div class="container">
 					<div class="row">
-						<ins class="adsbygoogle josephmansfield-article" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334" data-adtest="on"></ins>
-					</div>
-				</div>
-				<div class="alt">
-					<div class="page">
-						<div class="row">
-							<section class="column-2">
-								<h1>Want something else to read?</h1>
+						<section class="column-2">
+							<h1>Want something else to read?</h1>
 {% assign related_article = site.related_posts[0] %}
-								<article>
-									<h1><a href="{{ related_article.url }}">{{ related_article.title }}</a></h1>
-									<p class="secondary">{{ related_article.description }}</p>
-									<p><a href="{{ related_article.url }}">Read {% if related_article.tags != empty %}this {{ related_article.tags[0] }}{% endif %} article →</a></p>
-								</article>
-							</section>
-							<section class="column-1">
-								<h1>Share this article</h1>
-								<ul>
-									<li><div class="g-plus" data-action="share" data-annotation="bubble" data-height="24">Share on Google+</div></li>
-									<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Read “{{ page.title }}”, a {{ page.tags[0] }} article by Joseph Mansfield" data-size="large" data-via="sftrabbit">Share on Twitter</a></li>
-									<li><div class="fb-like" data-href="{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></li>
-								</ul>
-							</section>
-						</div>
+							<article>
+								<h1><a href="{{ related_article.url }}">{{ related_article.title }}</a></h1>
+								<p class="secondary">{{ related_article.description }}</p>
+								<p><a href="{{ related_article.url }}">Read {% if related_article.tags != empty %}this {{ related_article.tags[0] }}{% endif %} article →</a></p>
+							</article>
+						</section>
+						<section class="column-1">
+							<h1>Share this article</h1>
+							<ul>
+								<li><div class="g-plus" data-action="share" data-annotation="bubble" data-height="24">Share on Google+</div></li>
+								<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Read “{{ page.title }}”, a {{ page.tags[0] }} article by Joseph Mansfield" data-size="large" data-via="sftrabbit">Share on Twitter</a></li>
+								<li><div class="fb-like" data-href="{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></li>
+							</ul>
+						</section>
 					</div>
 				</div>
-			</main>
+			</div>
+		</main>
 {% include footer.html %}
 {% include scripts.html %}
-		</div>
 	</body>
 </html>

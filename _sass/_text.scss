@@ -51,27 +51,16 @@ a.button {
 
 	display: inline-block;
 	padding: 0.5em 1em;
-	background-color: $button-color;
-	color: $text-color-alt;
+	background-color: $button-bgcolor;
+	color: $button-text-color;
 
 	&:hover {
 		text-decoration: none;
 	}
 }
 
-h1 a {
-	@include link-colors($header-color);
-}
-
-li time {
-	@extend .secondary;
-	display: block;
-	font-size: $small-font-size;
-	line-height: 1.4em;
-}
-
 footer {
 	a {
-		color: $link-color-alt;
+		color: $link-color-running;
 	}
 }

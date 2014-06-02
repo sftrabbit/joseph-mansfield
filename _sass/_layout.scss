@@ -36,8 +36,8 @@ $size-gutter-width: 45px, 35px, 0px;
 
 .row {
 	@include clearfix;
-	margin-bottom: 1em;
-	margin-left: -(gutter-width(normal));
+	margin-left: (-(gutter-width(normal)));
+	padding-bottom: 3.5em;
 
 	@media (max-width: upper-limit(thin)) {
 		margin-left: -(gutter-width(thin));
@@ -45,10 +45,10 @@ $size-gutter-width: 45px, 35px, 0px;
 	@media (max-width: upper-limit(flow)) {
 		margin-left: -(gutter-width(flow));
 	}
-}
 
-.row:last-child {
-	margin-bottom: 0;
+	&:first-child {
+		padding-top: 3.5em;
+	}
 }
 
 @mixin column {
@@ -63,10 +63,9 @@ $size-gutter-width: 45px, 35px, 0px;
 	}
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 3 {
 	.column-#{$i} {
 		@include column;
-		margin-bottom: 1em;
 		width: column-width-n(normal, $i);
 
 		@media (max-width: upper-limit(thin)) {
@@ -96,4 +95,19 @@ $size-gutter-width: 45px, 35px, 0px;
 @mixin center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.container {
+	@include center;
+	/*padding-top: 3.5em;
+	padding-bottom: 1.5em;*/
+	width: page-width(normal);
+
+	@media (max-width: upper-limit(thin)) {
+		width: page-width(thin);
+	}
+	@media (max-width: upper-limit(flow)) {
+		width: page-width(flow);
+		margin: 0 30px;
+	}
 }

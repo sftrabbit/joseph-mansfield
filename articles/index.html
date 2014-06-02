@@ -3,10 +3,10 @@ layout: default
 title: Joseph Mansfield's articles
 description: Software developer and computer science student at the University of York.
 ---
-			<div class="page">
+			<div class="container">
 				<div class="row">
 					<div class="column-2">
-						<ul class="article-list">
+						<ul class="articles">
 {% for article in site.categories.articles limit:2 %}
 							<li>
 								<article>
@@ -25,7 +25,7 @@ description: Software developer and computer science student at the University o
 				</div>
 			</div>
 			<div class="alt">
-				<div class="page">
+				<div class="container">
 					<div class="row">
 						<div class="column-2">
 {% for tag in site.tags %}
