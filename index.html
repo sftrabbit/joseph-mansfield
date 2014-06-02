@@ -25,19 +25,23 @@ microdata_meta:
 						</a>
 					</div>
 				</div>
-				<div class="row">
-					<div class="column-2">
-						<ul class="article-list">
+			</div>
+			<div class="alt">
+				<div class="page">
+					<div class="row">
+						<div class="column-2">
+							<ul class="article-list">
 {% for article in site.categories.articles limit:3 %}
-							<li>
-								<article>
-									<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
-									<p class="secondary">{{ article.description }}</p>
-									<p><a href="{{ article.url }}">Read {% if article.tags != empty %}this {{ article.tags[0] }}{% endif %} article →</a></p>
-								</article>
-							</li>
+								<li>
+									<article>
+										<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+										<p class="secondary">{{ article.description }}</p>
+										<p><a href="{{ article.url }}">Read {% if article.tags != empty %}this {{ article.tags[0] }}{% endif %} article →</a></p>
+									</article>
+								</li>
 {% endfor %}
-						</ul>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

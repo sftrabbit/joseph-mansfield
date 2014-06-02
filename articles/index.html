@@ -23,16 +23,20 @@ description: Software developer and computer science student at the University o
 						<p class="secondary">Subscribe to <a href="#">the RSS/Atom feed</a> with your favourite news feed reader.</p>
 					</section>
 				</div>
-				<div class="row">
-					<div class="column-2">
+			</div>
+			<div class="alt">
+				<div class="page">
+					<div class="row">
+						<div class="column-2">
 {% for tag in site.tags %}
-						<p><b>{{ tag | first }} articles</b></p>
-						<ul>
+							<p><b>{{ tag | first }} articles</b></p>
+							<ul>
 {% for article in tag[1] %}
-							<li><a href="{{ article.url }}">{{ article.title }}</a></li>
+								<li><a href="{{ article.url }}">{{ article.title }}</a></li>
 {% endfor %}
-						</ul>
+							</ul>
 {% endfor %}
+						</div>
 					</div>
 				</div>
 			</div>
