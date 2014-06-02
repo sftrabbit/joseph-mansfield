@@ -24,6 +24,10 @@ mark {
 	padding: 0 0.2em;
 }
 
+pre {
+	tab-size: 2;
+}
+
 code {
 	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
 }
@@ -42,15 +46,21 @@ a.secondary {
 	}
 }
 
-li time {
-	@extend .secondary;
-	display: block;
-	font-size: $small-font-size;
-	line-height: 1.4em;
+a.button {
+	@include border-radius(5px);
+
+	display: inline-block;
+	padding: 0.5em 1em;
+	background-color: $button-bgcolor;
+	color: $button-text-color;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 footer {
 	a {
-		color: $link-color-alt;
+		color: $link-color-running;
 	}
 }

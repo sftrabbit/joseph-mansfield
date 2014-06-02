@@ -1,7 +1,12 @@
 $size-names: normal, thin, flow;
+$size-upper-limit: 10000px, 1020px, 760px;
 $size-page-width: 960px, 700px, auto;
-$size-column-width: 300px, 220px, 100%;
-$size-gutter-width: 30px, 20px, 0px;
+$size-column-width: 290px, 210px, 100%;
+$size-gutter-width: 45px, 35px, 0px;
+
+@function upper-limit($size) {
+	@return nth($size-upper-limit, index($size-names, $size));
+}
 
 @function page-width($size) {
 	@return nth($size-page-width, index($size-names, $size));
@@ -31,46 +36,50 @@ $size-gutter-width: 30px, 20px, 0px;
 
 .row {
 	@include clearfix;
-	margin-bottom: 1em;
-	margin-left: -(gutter-width(normal));
+	margin-left: (-(gutter-width(normal)));
+	padding-bottom: 3.5em;
 
-	@media (max-width: 1020px) {
+	@media (max-width: upper-limit(thin)) {
 		margin-left: -(gutter-width(thin));
 	}
-	@media (max-width: 760px) {
+	@media (max-width: upper-limit(flow)) {
 		margin-left: -(gutter-width(flow));
 	}
-}
 
-.row:last-child {
-	margin-bottom: 0;
+	&:first-child {
+		padding-top: 3.5em;
+	}
 }
 
 @mixin column {
 	float: left;
 	margin-left: gutter-width(normal);
 
-	@media (max-width: 1020px) {
+	@media (max-width: upper-limit(thin)) {
 		margin-left: gutter-width(thin);
 	}
-	@media (max-width: 760px) {
+	@media (max-width: upper-limit(flow)) {
 		margin-left: gutter-width(flow);
 	}
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 3 {
 	.column-#{$i} {
 		@include column;
-		margin-bottom: 1em;
 		width: column-width-n(normal, $i);
 
-		@media (max-width: 1020px) {
+		@media (max-width: upper-limit(thin)) {
 			width: column-width-n(thin, $i);
 		}
-		@media (max-width: 760px) {
+
+		@media (max-width: upper-limit(flow)) {
 			@include clearfix;
-			margin-bottom: 2em;
+			margin-bottom: 3.5em;
 			width: column-width-n(flow, $i);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -79,10 +88,10 @@ $size-gutter-width: 30px, 20px, 0px;
 	.offset-#{$i} {
 		margin-left: column-offset(normal, $i);
 
-		@media (max-width: 1020px) {
+		@media (max-width: upper-limit(thin)) {
 			margin-left: column-offset(thin, $i);
 		}
-		@media (max-width: 760px) {
+		@media (max-width: upper-limit(flow)) {
 			margin-left: 0;
 		}
 	}
@@ -91,4 +100,19 @@ $size-gutter-width: 30px, 20px, 0px;
 @mixin center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.container {
+	@include center;
+	/*padding-top: 3.5em;
+	padding-bottom: 1.5em;*/
+	width: page-width(normal);
+
+	@media (max-width: upper-limit(thin)) {
+		width: page-width(thin);
+	}
+	@media (max-width: upper-limit(flow)) {
+		width: page-width(flow);
+		margin: 0 30px;
+	}
 }

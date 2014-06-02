@@ -1,10 +1,15 @@
-$page-bgcolor: #fdfdfd;
-$page-bgcolor-alt: #5f9bbc;
-
+$bgcolor: #fdfdfd;
 $text-color: #222222;
 $text-color-secondary: lighten($text-color, 30%);
 $link-color: #347192;
 $header-color: #9ab549;
 
-$text-color-alt: #fdfdfd;
-$link-color-alt: #b9e72d;
+$bgcolor-alt: #f3f3f3;
+$text-color-alt: #222222;
+
+$bgcolor-running: #5f9bbc;
+$text-color-running: #fdfdfd;
+$link-color-running: #b9e72d;
+
+$button-bgcolor: #9ab549;
+$button-text-color: #fdfdfd;

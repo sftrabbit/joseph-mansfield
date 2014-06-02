@@ -2,6 +2,7 @@
 layout: default
 title: Joseph Mansfield, software developer
 description: Software developer and computer science student at the University of York.
+class: index
 microdata_type: http://schema.org/Person
 microdata_meta:
   - name: jobTitle
@@ -11,11 +12,11 @@ microdata_meta:
   - name: image
     value: http://www.gravatar.com/avatar/9f438bc04462ee5af4132921a3474842.png?s=256
 ---
-			<div class="page">
+			<div class="container">
 				<div class="row">
 					<div class="column-2">
-						<p class="secondary">I'm a software developer studying computer science at the <a href="http://www.york.ac.uk/">University of York</a>.</p>
-						<p class="secondary">My interests include C++ programming, web development, Android development, game development, computer graphics, interface design, and system engineering.</p>
+						<p>I'm a software developer studying computer science at the <a href="http://www.york.ac.uk/">University of York</a>.</p>
+						<p>My interests include C++ programming, web development, Android development, game development, computer graphics, interface design, and system engineering.</p>
 					</div>
 					<div class="column-1 cv">
 						<a href="{{ site.base_url}}cv.pdf">
@@ -25,3 +26,29 @@ microdata_meta:
 					</div>
 				</div>
 			</div>
+{% if site.categories.articles %}
+			<div class="alt">
+				<div class="container">
+					<div class="row">
+						<div class="column-2">
+							<ul class="articles">
+{% for article in site.categories.articles limit:2 %}
+								<li>
+									<article>
+										<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+										<p class="secondary">{{ article.description }}</p>
+										<p><a href="{{ article.url }}">Read {% if article.tags != empty %}this {{ article.tags[0] }}{% endif %} article →</a></p>
+									</article>
+								</li>
+{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="column-2">
+							<p><a class="button" href="{{ site.base_url }}/articles/">More articles...</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+{% endif %}
