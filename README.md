@@ -8,3 +8,4 @@ Acknowledgements
 
 - [Sitemap.xml Generator](https://github.com/kinnetica/jekyll-plugins) by [Michael Levin](http://www.kinnetica.com/)
 - [Jekyll Generator for SCSS](https://gist.github.com/parkr/2874934) by [Parker Moore](http://parkermoore.de/)
+- [Jekyll RSS Feed Generator](https://github.com/agelber/jekyll-rss) by [Assaf Gelber](http://agelber.com/)
