@@ -81,11 +81,17 @@ article {
 }
 
 ul {
+	list-style-type: disc;
+
+	li {
+		margin: 0 0 1em 1.5em;
+	}
+
 	&.articles {
 		list-style-type: none;
 	
 		li {
-			margin-bottom: 3em;
+			margin: 0 0 3em 0;
 		}
 	
 		li:last-child {
