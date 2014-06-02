@@ -71,10 +71,15 @@ $size-gutter-width: 45px, 35px, 0px;
 		@media (max-width: upper-limit(thin)) {
 			width: column-width-n(thin, $i);
 		}
+
 		@media (max-width: upper-limit(flow)) {
 			@include clearfix;
-			margin-bottom: 2em;
+			margin-bottom: 3.5em;
 			width: column-width-n(flow, $i);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
