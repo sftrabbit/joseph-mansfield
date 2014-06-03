@@ -7,3 +7,4 @@ url: http://sftrabbit.co.uk
 permalink: /:categories/:title.html
 excerpt_seperator: ""
 rss_path: /articles/
+environment: development
