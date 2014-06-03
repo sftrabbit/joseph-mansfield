@@ -8,7 +8,7 @@ Articles
 
 Article sources are kept separately at [sftrabbit/JosephMansfieldArticles](https://github.com/sftrabbit/JosephMansfieldArticles). To add them to the build, simply do:
 
-    $ git clone https://github.com/sftrabbit/JosephMansfield.git articles/_posts
+    $ git clone https://github.com/sftrabbit/JosephMansfieldArticles.git articles/_posts
 
 Acknowledgements
 ----------------
