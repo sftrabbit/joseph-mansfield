@@ -51,8 +51,15 @@ article {
 
 	footer {
 		font-size: $small-font-size;
-		font-style: italic;
 		margin-top: 2.5em;
+
+		p {
+			margin: 0.3em 0;
+		}
+
+		.author {
+			font-style: italic;
+		}
 	}
 
 	section h1 {

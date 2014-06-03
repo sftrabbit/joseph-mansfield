@@ -20,7 +20,9 @@
 						<p class="secondary" itemprop="description">{{ page.description }}</p>
 {{ content }}
 						<footer>
-							<p>Written by <a href="{{ site.base_url }}/" itemprop="author">Joseph Mansfield</a></p>
+							<p class="author">Written by <a href="{{ site.base_url }}/" itemprop="author">Joseph Mansfield</a></p>
+{% assign filename = page.path | remove: 'articles/_posts/' %}
+							<p class="secondary">Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</p>
 						</footer>
 					</article>
 				</div>
