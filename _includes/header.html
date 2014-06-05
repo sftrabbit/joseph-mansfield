@@ -7,7 +7,7 @@
 {% else %}
 					<img src="{{ site.baseurl }}/images/header-icon.svg" alt="">
 {% endif %}
-					<h1>Joseph Mansfield</h1>	
+					<h1{% if page.class == 'index' %} itemprop="name"{% endif %}>Joseph Mansfield</h1>	
 				</a>
 {% if page.class == 'index' %}
 {% assign image_suffix = 'color' %}
