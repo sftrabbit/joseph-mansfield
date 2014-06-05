@@ -17,13 +17,20 @@
 						<header>
 							<h1 itemprop="headline">{{ page.title }}</h1>
 						</header>
-						<p class="secondary">{{ page.description }}</p>
+						<p class="secondary" itemprop="description">{{ page.description }}</p>
 {{ content }}
+						<footer>
+							<p class="author">Written by <a href="{{ site.base_url }}/" itemprop="author">Joseph Mansfield</a></p>
+{% assign filename = page.path | remove: 'articles/_posts/' %}
+							<p class="secondary">Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</p>
+						</footer>
 					</article>
 				</div>
+{% if site.environment == 'production' %}
 				<div class="row">
-					<ins class="adsbygoogle josephmansfield-article" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334" data-adtest="on"></ins>
+					<ins class="adsbygoogle josephmansfield-article" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
 				</div>
+{% endif %}
 			</div>
 			<div class="alt">
 				<div class="container">
