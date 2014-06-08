@@ -21,11 +21,13 @@ mark {
 }
 
 pre {
+	margin: 0 1.5em;
 	tab-size: 2;
 }
 
 code {
 	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
+	font-size: $code-font-size;
 }
 
 a {
