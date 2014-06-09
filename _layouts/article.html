@@ -1,14 +1,10 @@
 <!doctype html>
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" lang="en">
 	<head>
 		<title>{{ page.title }} by Joseph Mansfield</title>
 {% include meta.html %}
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:creator" content="@sftrabbit">
-		<meta property="og:title" content="{{ page.title }}" />
-		<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-		<meta property="og:description" content="{{ page.description }}" />
-		<meta property="og:image" content="{{ site.url }}/images/logo.png" />
+		<meta property="og:type" content="article" />
+		<meta property="article:author" content="Joseph Mansfield" />
 	</head>
 	<body{% if page.class %} class="{{ page.class }}"{% endif %}>
 {% include header.html %}
