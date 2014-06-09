@@ -20,12 +20,23 @@ mark {
 	padding: 0 0.2em;
 }
 
-pre {
-	tab-size: 2;
+code {
+	padding: 2px 4px;
+	background-color: $bgcolor-alt;
+	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
+	font-size: $code-font-size;
+	line-height: 1em;
 }
 
-code {
-	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
+pre {
+	padding: 0.5em 1em;
+	tab-size: 2;
+	background-color: $bgcolor-alt;
+
+	code {
+		display: block;
+		line-height: 1.4em;
+	}
 }
 
 a {
