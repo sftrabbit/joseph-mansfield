@@ -1,6 +1,10 @@
 html {
 	color: $text-color;
 	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+
+	@media (max-width: upper-limit(tiny)) {
+		font-size: #{$tiny-font-size};
+	}
 }
 
 @mixin running {
