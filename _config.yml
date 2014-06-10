@@ -3,7 +3,7 @@ author: Joseph Mansfield
 highlighter: pygments
 encoding: UTF-8
 exclude: ['README.md']
-url: http://sftrabbit.co.uk
+url: http://josephmansfield.uk
 permalink: /:categories/:title.html
 excerpt_seperator: ""
 rss_path: /articles/
