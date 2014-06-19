@@ -135,8 +135,14 @@ ul.share-buttons {
 	}
 }
 
-.josephmansfield-article {
+.josephmansfield-article-bottom {
 	@extend .column-2;
 
 	height: 98px;
+}
+
+.josephmansfield-article-side {
+	@extend .column-1;
+
+	height: 196px;
 }

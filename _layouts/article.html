@@ -23,10 +23,13 @@
 							<p class="secondary">Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</p>
 						</footer>
 					</article>
+{% if site.environment == 'production' %}
+					<ins class="adsbygoogle josephmansfield-article-side" data-ad-client="ca-pub-6789411983750873" data-ad-slot="7401738733"></ins>
+{% endif %}
 				</div>
 {% if site.environment == 'production' %}
 				<div class="row">
-					<ins class="adsbygoogle josephmansfield-article" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
+					<ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
 				</div>
 {% endif %}
 			</div>
