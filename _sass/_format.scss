@@ -26,6 +26,10 @@ p {
 	}
 }
 
+aside p:first-child {
+	margin-top: 1.5em;
+}
+
 section h1 {
 	margin-bottom: 1em;
 	font-weight: 700;
@@ -71,7 +75,6 @@ article {
 	}
 
 	aside {
-		@include sidebar;
 		font-size: 0.8em;
 		line-height: 1.4em;
 		color: $text-color-secondary;
@@ -92,7 +95,6 @@ article {
 	}
 
 	figcaption {
-		@include sidebar;
 		font-size: 0.8em;
 		line-height: 1.4em;
 		color: $text-color-secondary;
@@ -103,7 +105,7 @@ ul {
 	list-style-type: disc;
 
 	li {
-		margin: 0 0 1em 1.5em;
+		margin-left: 1.5em;
 	}
 
 	&.articles {
@@ -135,8 +137,14 @@ ul.share-buttons {
 	}
 }
 
-.josephmansfield-article {
+.josephmansfield-article-bottom {
 	@extend .column-2;
 
 	height: 98px;
+}
+
+.josephmansfield-article-side {
+	@extend .column-1;
+
+	height: 196px;
 }

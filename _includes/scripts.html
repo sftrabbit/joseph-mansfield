@@ -37,5 +37,15 @@ ga('send', 'pageview');
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appid=526696677453668&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+var disqus_shortname = 'josephmansfield';
+var disqus_identifier = '{{ page.id }}';
+var disqus_title = '{{ page.title }}';
+
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
 {% endif %}
 		</script>
