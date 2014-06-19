@@ -26,6 +26,10 @@ p {
 	}
 }
 
+aside p:first-child {
+	margin-top: 1.5em;
+}
+
 section h1 {
 	margin-bottom: 1em;
 	font-weight: 700;
