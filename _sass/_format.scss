@@ -152,8 +152,8 @@ ul.share-buttons {
 }
 
 .josephmansfield-article-bottom {
-	@extend .column-2;
-
+	display: block;
+	width: 100%;
 	height: 98px;
 }
 

@@ -19,7 +19,7 @@
 {{ content }}
 					</div>
 					<div class="column-1">
-{% if site.environment != 'production' %}
+{% if site.environment == 'production' %}
 						<ins class="adsbygoogle josephmansfield-article-side" data-ad-client="ca-pub-6789411983750873" data-ad-slot="7401738733"></ins>
 {% endif %}
 						<footer>
@@ -32,7 +32,9 @@
 				</article>
 {% if site.environment == 'production' %}
 				<div class="row">
-					<ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
+					<div class="column-2">
+						<ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
+					</div>
 				</div>
 {% endif %}
 				<div class="row">
