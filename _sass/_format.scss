@@ -42,7 +42,7 @@ section h1 {
 }
 
 article { 
-	> h1, > header h1 {
+	h1, header h1 {
 		font-size: 1.6em;
 		font-weight: 700;
 		line-height: 1.4em;
@@ -54,15 +54,29 @@ article {
 	}
 
 	footer {
-		font-size: $small-font-size;
-		margin-top: 2.5em;
+		margin-top: 1.5em;
+		text-align: center;
 
-		p {
-			margin: 0.3em 0;
+		.author-photo {
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
 		}
 
 		.author {
-			font-style: italic;
+			font-size: $small-font-size;
+
+			.author-name {
+				display: block;
+				font-size: $base-font-size;
+			}
+
+			small {
+				margin-top: 0.5em;
+			}
+		}
+
+		p small {
+			margin: 0 2em;
 		}
 	}
 
@@ -138,13 +152,13 @@ ul.share-buttons {
 }
 
 .josephmansfield-article-bottom {
-	@extend .column-2;
-
+	display: block;
+	width: 100%;
 	height: 98px;
 }
 
 .josephmansfield-article-side {
-	@extend .column-1;
-
+	display: block;
+	width: 100%;
 	height: 196px;
 }

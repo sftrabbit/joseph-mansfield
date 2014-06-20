@@ -1,6 +1,8 @@
 small {
 	@extend .secondary;
+	display: block;
 	font-size: $small-font-size;
+	line-height: $small-line-height;
 }
 
 em, i {

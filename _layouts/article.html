@@ -10,26 +10,31 @@
 {% include header.html %}
 		<main id="content">
 			<div class="container">
-				<div class="row">
-					<article class="column-2" itemscope itemtype="http://schema.org/TechArticle">
+				<article class="row" itemscope itemtype="http://schema.org/TechArticle">
+					<div class="column-2">
 						<header>
 							<h1 itemprop="name">{{ page.title }}</h1>
 						</header>
 						<p class="secondary" itemprop="description">{{ page.description }}</p>
 {{ content }}
-						<footer>
-							<p class="author">Written by <a href="{{ site.base_url }}/" itemprop="author">Joseph Mansfield</a></p>
-{% assign filename = page.path | remove: 'articles/_posts/' %}
-							<p class="secondary">Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</p>
-						</footer>
-					</article>
+					</div>
+					<div class="column-1">
 {% if site.environment == 'production' %}
-					<ins class="adsbygoogle josephmansfield-article-side" data-ad-client="ca-pub-6789411983750873" data-ad-slot="7401738733"></ins>
+						<ins class="adsbygoogle josephmansfield-article-side" data-ad-client="ca-pub-6789411983750873" data-ad-slot="7401738733"></ins>
 {% endif %}
-				</div>
+						<footer>
+							<img class="author-photo" src="http://www.gravatar.com/avatar/9f438bc04462ee5af4132921a3474842.png?s=128" alt="Joseph Mansfield">
+							<p class="author">Written by <a class="author-name" href="{{ site.base_url }}/" rel="author" itemprop="author">Joseph Mansfield</a> <small>(<a href="https://plus.google.com/+JosephMansfield?rel=author">Google+</a>)</small></p>
+{% assign filename = page.path | remove: 'articles/_posts/' %}
+							<p><small>Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</small></p>
+						</footer>
+					</div>
+				</article>
 {% if site.environment == 'production' %}
 				<div class="row">
-					<ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
+					<div class="column-2">
+						<ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
+					</div>
 				</div>
 {% endif %}
 				<div class="row">
