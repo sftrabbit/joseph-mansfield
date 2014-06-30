@@ -5,6 +5,6 @@ encoding: UTF-8
 exclude: ['README.md']
 url: http://josephmansfield.uk
 permalink: /:categories/:title.html
-excerpt_seperator: ""
+excerpt_separator: ""
 rss_path: /articles/
 environment: development
