@@ -135,6 +135,16 @@ ul {
 	}
 }
 
+dl dt {
+	float: left;
+	font-weight: bold;
+	margin-right: 0.7em;
+}
+
+dl dd {
+	margin-left: 1.5em;
+}
+
 ol {
 	list-style-type: decimal;
 
