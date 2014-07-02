@@ -1,0 +1,5 @@
+									<article>
+										<h1><a href="{{ include.article.url }}">{{ include.article.title }}</a></h1>
+										<p class="secondary">{{ include.article.description }}</p>
+										<p><a href="{{ include.article.url }}">Read {% if include.article.tags != empty %}this {{ include.article.tags[0] }}{% endif %} article →</a></p>
+									</article>

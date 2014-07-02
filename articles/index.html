@@ -4,25 +4,7 @@ title: Joseph Mansfield's articles
 description: Technical articles written by Joseph Mansfield, a software developer and computer science student.
 ---
 			<div class="container">
-				<div class="row">
-					<div class="column-2">
-						<ul class="articles">
-{% for article in site.categories.articles limit:2 %}
-							<li>
-								<article>
-									<h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
-									<p class="secondary">{{ article.description }}</p>
-									<p><a href="{{ article.url }}">Read {% if article.tags != empty %}this {{ article.tags[0] }}{% endif %} article →</a></p>
-								</article>
-							</li>
-{% endfor %}
-						</ul>
-					</div>
-					<section class="column-1">
-						<h1><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt=""> Hear about new articles</h1>
-						<p class="secondary">Subscribe to <a href="http://feeds.feedburner.com/JosephMansfield" rel="alternate external" type="application/rss+xml">the RSS feed</a> with your favourite news feed reader.</p>
-					</section>
-				</div>
+{% include article_list.html num=2 %}
 			</div>
 {% if site.categories.articles %}
 			<div class="alt">

@@ -58,11 +58,7 @@
 {% if related_article != nil %}
 						<section class="column-2">
 							<h1>Want something else to read?</h1>
-							<article>
-								<h1><a href="{{ related_article.url }}">{{ related_article.title }}</a></h1>
-								<p class="secondary">{{ related_article.description }}</p>
-								<p><a href="{{ related_article.url }}">Read {% if related_article.tags != empty %}this {{ related_article.tags[0] }}{% endif %} article →</a></p>
-							</article>
+{% include article_list_item.html article=related_article %}
 						</section>
 {% endif %}
 						<section class="column-1">
