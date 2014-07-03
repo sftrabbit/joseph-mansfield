@@ -14,7 +14,7 @@
 	}
 }
 
-p {
+p, aside {
 	margin: 1.2em 0;
 
 	&:first-child {
@@ -24,10 +24,6 @@ p {
 	&:last-child {
 		margin-bottom: 0;
 	}
-}
-
-aside p:first-child {
-	margin-top: 1.5em;
 }
 
 section h1 {
