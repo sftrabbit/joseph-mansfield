@@ -90,6 +90,10 @@ body {
 .alt {
 	color: $text-color-alt;
 	background-color: $bgcolor-alt;
+
+	a {
+		@include link-colors($link-color-alt);
+	}
 }
 
 .contentskip {
