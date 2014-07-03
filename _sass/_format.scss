@@ -115,6 +115,16 @@ article {
 	}
 }
 
+.alt {
+	h1 {
+		color: $text-color;
+	}
+
+	article h1 a {
+		@include link-colors($header-color);
+	}
+}
+
 ul {
 	list-style-type: disc;
 

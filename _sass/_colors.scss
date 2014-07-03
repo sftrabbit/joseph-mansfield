@@ -1,12 +1,13 @@
 $bgcolor: #fdfdfd;
 $text-color: #222222;
-$text-color-secondary: lighten($text-color, 20%);
+$text-color-secondary: lighten($text-color, 30%);
 $link-color: #347192;
 $link-color-secondary: lighten($link-color, 15%);
 $header-color: #9ab549;
 
 $bgcolor-alt: #f3f3f3;
-$text-color-alt: #222222;
+$text-color-alt: lighten($text-color, 30%);
+$link-color-alt: lighten($link-color, 15%);
 
 $bgcolor-running: #5f9bbc;
 $text-color-running: #fdfdfd;
