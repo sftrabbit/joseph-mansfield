@@ -6,8 +6,8 @@ $link-color-secondary: lighten($link-color, 15%);
 $header-color: #9ab549;
 
 $bgcolor-alt: #f3f3f3;
-$text-color-alt: lighten($text-color, 30%);
-$link-color-alt: lighten($link-color, 15%);
+$text-color-alt: $text-color;
+$link-color-alt: $link-color;
 
 $bgcolor-running: #5f9bbc;
 $text-color-running: #fdfdfd;
