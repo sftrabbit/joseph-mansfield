@@ -20,7 +20,9 @@ ga('create', 'UA-17335804-2', 'auto');
 ga('send', 'pageview');
 
 {% if page.categories[0] == 'articles' %}
-(adsbygoogle = window.adsbygoogle || []).push({});
+adsbygoogle = window.adsbygoogle || [];
+adsbygoogle.push({});
+adsbygoogle.push({});
 
 (function() {
   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -34,7 +36,7 @@ ga('send', 'pageview');
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appid=526696677453668&version=v2.0";
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=526696677453668&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -47,5 +49,6 @@ var disqus_title = '{{ page.title }}';
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
+
 {% endif %}
 		</script>
