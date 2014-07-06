@@ -54,16 +54,13 @@ body.index {
 	}
 }
 
-.cv {
-	img {
-		margin: 0.3em auto 0.7em auto;
-		display: block;
-		box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.05);
-	}
+.bio {
+	padding-bottom: 4em;
+	margin-left: 0;
+	font-size: 19px;
 
-	a:hover {
-		text-decoration: none;
+	.column-2 {
+		float: none;
+		margin: 0 auto;
 	}
-
-	text-align: center;
 }
