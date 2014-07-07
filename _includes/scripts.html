@@ -42,7 +42,7 @@ adsbygoogle.push({});
 
 var disqus_shortname = 'josephmansfield';
 var disqus_identifier = '{{ page.id }}';
-var disqus_title = '{{ page.title }}';
+var disqus_title = "{{ page.title | strip_html }}";
 
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

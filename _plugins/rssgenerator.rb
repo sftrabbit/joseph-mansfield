@@ -73,9 +73,9 @@ module Jekyll
           maker.items.new_item do |item|
             link = "#{site.config['url']}#{post.url}"
             item.guid.content = link
-            item.title = post.title
+            item.title = post.title.gsub(/<\/?[^>]*>/, "")
             item.link = link
-            item.description = post.data['description']
+            item.description = "<![CDATA[#{post.data['description']}]]>"
             item.updated = post.date
           end
         end
