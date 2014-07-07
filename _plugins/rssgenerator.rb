@@ -75,7 +75,7 @@ module Jekyll
             item.guid.content = link
             item.title = post.title.gsub(/<\/?[^>]*>/, "")
             item.link = link
-            item.description = "<![CDATA[#{post.data['description']}]]>"
+            item.description = post.data['description'].gsub(/<\/?[^>]*>/, "")
             item.updated = post.date
           end
         end
