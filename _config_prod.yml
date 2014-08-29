@@ -1,2 +1,4 @@
 environment: production
+url: http://josephmansfield.uk
+media_url: http://josephmansfield.uk/media
 lsi: true

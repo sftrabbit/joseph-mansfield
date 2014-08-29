@@ -3,7 +3,8 @@ author: Joseph Mansfield
 highlighter: pygments
 encoding: UTF-8
 exclude: ['README.md']
-url: http://josephmansfield.uk
+url: ""
+media_url: "/media"
 permalink: /:categories/:title.html
 excerpt_separator: ""
 rss_path: /articles/
