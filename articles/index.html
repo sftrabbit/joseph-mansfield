@@ -12,7 +12,7 @@ description: Technical articles written by Joseph Mansfield, a software develope
 					<div class="row">
 						<div class="column-2">
 {% for tag in site.tags %}
-							<p><b>{{ tag | first }} articles</b></p>
+							<p><b>{{ tag | first | capitalize }} articles</b></p>
 							<ul>
 {% for article in tag[1] %}
 								<li><a href="{{ article.url }}">{{ article.title }}</a></li>
