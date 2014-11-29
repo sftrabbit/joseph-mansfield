@@ -71,6 +71,24 @@ article {
 			}
 		}
 
+		.related-resources {
+			li {
+				display: inline-block;
+				width: 34px;
+				height: 34px;
+				margin: 4px;
+
+				img {
+					width: 34px;
+					height: 34px;
+				}
+
+				img:hover {
+					@include animation(wiggle);
+				}
+			}
+		}
+
 		p small {
 			margin: 0 2em;
 		}
