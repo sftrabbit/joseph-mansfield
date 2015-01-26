@@ -54,7 +54,7 @@ pre {
 	}
 }
 
-a {
+a[href] {
 	@include link-colors($link-color);
 	@include hover-link;
 }
