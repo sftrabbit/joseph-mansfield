@@ -44,7 +44,7 @@ article {
 		line-height: 1.4em;
 		color: $header-color;
 
-		a {
+		a[href] {
 			@include link-colors($header-color);
 		}
 	}
