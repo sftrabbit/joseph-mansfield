@@ -54,7 +54,7 @@ pre {
 	}
 }
 
-a[href] {
+a {
 	@include link-colors($link-color);
 	@include hover-link;
 }
@@ -66,6 +66,14 @@ a.button {
 	padding: 0.5em 1em;
 	background-color: $button-bgcolor;
 	color: $button-text-color;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+a:not([href]) {
+	color: $text-color;
 
 	&:hover {
 		text-decoration: none;
