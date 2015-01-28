@@ -67,7 +67,7 @@ module Jekyll
 
         post_limit = (site.config['rss_post_limit'] - 1 rescue site.posts.count)
 
-        site.categories['articles'].reverse[0..post_limit].each do |post|
+        site.categories['articles'][0..post_limit].each do |post|
           post = post.dup
           post.render(site.layouts, site.site_payload)
           maker.items.new_item do |item|
