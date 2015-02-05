@@ -39,6 +39,7 @@ section h1 {
 
 article { 
 	h1, header h1 {
+		font-family: $header-font-family;
 		font-size: 1.6em;
 		font-weight: 700;
 		line-height: 1.4em;
