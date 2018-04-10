@@ -1,7 +1,4 @@
 html {
-	color: $text-color;
-	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-
 	@media (max-width: upper-limit(tiny)) {
 		font-size: #{$tiny-font-size};
 	}
@@ -13,6 +10,8 @@ html {
 }
 
 body {
+	color: $text-color;
+	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
 	background-color: $bgcolor-running;
 
 	> header {
@@ -22,8 +21,6 @@ body {
 		padding: 8px 0;
 
 		.title {
-			@include unstyled-link;
-
 			img {
 				@include animation(fadeIn);
 				float: left;
@@ -50,7 +47,7 @@ body {
 				margin: 4px;
 		
 				img {
-					@include opacity(0.5);
+					opacity: 0.5;
 		
 					width: 34px;
 					height: 34px;
@@ -92,7 +89,7 @@ body {
 	background-color: $bgcolor-alt;
 
 	a {
-		@include link-colors($link-color-alt);
+		color: $link-color-alt;
 	}
 }
 

@@ -4,6 +4,7 @@ highlighter: pygments
 encoding: UTF-8
 exclude: ['README.md']
 url: ""
+baseurl: ""
 media_url: "/media"
 permalink: /:categories/:title.html
 excerpt_separator: ""

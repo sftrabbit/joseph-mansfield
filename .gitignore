@@ -1,5 +1,4 @@
 /_site
-/_sass/.sass-cache
-/styles
+.sass-cache
 /articles/_posts
 /media

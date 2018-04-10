@@ -55,16 +55,15 @@ pre {
 }
 
 a {
-	@include link-colors($link-color);
-	@include hover-link;
+	color: $link-color;
+	text-decoration: none;
 }
 
 a.button {
-	@include border-radius(5px);
-
 	display: inline-block;
 	padding: 0.5em 1em;
 	background-color: $button-bgcolor;
+	border-radius: 5px;
 	color: $button-text-color;
 
 	&:hover {
@@ -89,7 +88,7 @@ a:not([href]) {
 	color: $text-color-secondary;
 
 	a {
-		@include link-colors($link-color-secondary);
+		color: $link-color-secondary;
 	}
 }
 
