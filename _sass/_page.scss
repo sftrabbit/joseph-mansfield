@@ -39,25 +39,22 @@ body {
 		.related-resources {
 			@include clearfix;
 			float: right;
-		
+
 			li {
 				display: inline-block;
-				width: 34px;
-				height: 34px;
-				margin: 4px;
-		
+
 				img {
 					opacity: 0.5;
-		
+
 					width: 34px;
 					height: 34px;
 				}
-		
+
 				img:hover {
 					@include animation(wiggle);
 				}
 			}
-		
+
 			@media (max-width: upper-limit(flow)) {
 				display: none;
 			}
@@ -70,8 +67,6 @@ body {
 
 	> footer {
 		@include running;
-
-		font-size: $small-font-size; 
 
 		.row:first-child {
 			padding: 2em 0;
@@ -96,7 +91,7 @@ body {
 .contentskip {
 	position: absolute;
 	font-size: $small-font-size;
-	padding: 0 1em; 
+	padding: 0 1em;
 	top: -2em;
 	left: 1em;
 
