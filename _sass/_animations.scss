@@ -1,23 +1,23 @@
 @-webkit-keyframes fadeIn {
-	0% { opacity: 0.0; }
-	100% { opacity: 1.0; }
+  0% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
 @-moz-keyframes fadeIn {
-	0% { opacity: 0.0; }
-	100% { opacity: 1.0; }
+  0% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
 @-o-keyframes fadeIn {
-	0% { opacity: 0.0; }
-	100% { opacity: 1.0; }
+  0% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
 @keyframes fadeIn {
-	0% { opacity: 0.0; }
-	100% { opacity: 1.0; }
+  0% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
 
 @-webkit-keyframes wiggle {
-	0% { -webkit-transform: translateX(0%); }
-	15% { -webkit-transform:  rotate(15deg); }
+  0% { -webkit-transform: translateX(0%); }
+  15% { -webkit-transform:  rotate(15deg); }
   30% { -webkit-transform:  rotate(-12deg); }
   45% { -webkit-transform:  rotate(9deg); }
   60% { -webkit-transform:  rotate(-6deg); }
@@ -25,8 +25,8 @@
   100% { -webkit-transform: rotate(0deg); }
 }
 @-moz-keyframes wiggle {
-	0% { -moz-transform: translateX(0%); }
-	15% { -moz-transform:  rotate(15deg); }
+  0% { -moz-transform: translateX(0%); }
+  15% { -moz-transform:  rotate(15deg); }
   30% { -moz-transform:  rotate(-12deg); }
   45% { -moz-transform:  rotate(9deg); }
   60% { -moz-transform:  rotate(-6deg); }
@@ -34,8 +34,8 @@
   100% { -moz-transform: rotate(0deg); }
 }
 @-o-keyframes wiggle {
-	0% { -o-transform: translateX(0%); }
-	15% { -o-transform:  rotate(15deg); }
+  0% { -o-transform: translateX(0%); }
+  15% { -o-transform:  rotate(15deg); }
   30% { -o-transform:  rotate(-12deg); }
   45% { -o-transform:  rotate(9deg); }
   60% { -o-transform:  rotate(-6deg); }
@@ -43,8 +43,8 @@
   100% { -o-transform: rotate(0deg); }
 }
 @keyframes wiggle {
-	0% { transform: translateX(0%); }
-	15% { transform:  rotate(15deg); }
+  0% { transform: translateX(0%); }
+  15% { transform:  rotate(15deg); }
   30% { transform:  rotate(-12deg); }
   45% { transform:  rotate(9deg); }
   60% { transform:  rotate(-6deg); }
@@ -53,8 +53,8 @@
 }
 
 @mixin animation($animation) {
-	-webkit-animation-name: $animation;
-	-webkit-animation-iteration-count: once;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 0.5s;
+  -webkit-animation-name: $animation;
+  -webkit-animation-iteration-count: once;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.5s;
 }

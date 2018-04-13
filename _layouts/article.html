@@ -1,87 +1,87 @@
 <!doctype html>
 <html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" lang="en">
-	<head>
-		<title>{{ page.title | strip_html }} – Joseph Mansfield</title>
-{% include meta.html %}
-		<meta property="og:type" content="article">
-		<meta property="article:author" content="Joseph Mansfield">
-	</head>
-	<body{% if page.class %} class="{{ page.class }}"{% endif %}>
-{% include header.html %}
-		<main id="content">
-			<div class="container">
-				<article class="row" itemscope itemtype="http://schema.org/TechArticle">
-					<div class="column-2">
-						<header>
-							<h1 itemprop="name">{{ page.title }}</h1>
-						</header>
-						<p class="secondary" itemprop="description">{{ page.description }}</p>
-{{ content }}
-					</div>
-					<div class="column-1">
-{% if site.environment == 'production' %}
-						<ins class="adsbygoogle josephmansfield-article-side" data-ad-client="ca-pub-6789411983750873" data-ad-slot="7401738733"></ins>
-{% endif %}
-						<footer>
-							<img class="author-photo" src="http://www.gravatar.com/avatar/9f438bc04462ee5af4132921a3474842.png?s=128" alt="Joseph Mansfield">
-							<p class="author">Written by <a class="author-name" href="{{ site.base_url }}/" rel="author" itemprop="author">Joseph Mansfield</a></p>
-							<ul class="related-resources">
-								<li><a href="https://github.com/sftrabbit" title="GitHub" rel="external"><img src="{{ site.baseurl }}/images/github-color.svg" alt="GitHub"></a></li>
-								<li><a href="http://stackoverflow.com/users/150634/joseph-mansfield" title="Stack Overflow" rel="external"><img src="{{ site.baseurl }}/images/stackoverflow-color.svg" alt="Stack Overflow"></a></li>
-								<li><a href="https://twitter.com/sftrabbit" title="Twitter" rel="external"><img src="{{ site.baseurl }}/images/twitter-color.svg" alt="Twitter"></a></li>
-								<li><a href="https://plus.google.com/+JosephMansfield?rel=author" title="Google+" rel="external"><img src="{{ site.baseurl }}/images/gplus-color.svg" alt="Google+"></a></li>
-								<li><a href="https://uk.linkedin.com/in/sftrabbit/" title="LinkedIn" rel="external"><img src="{{ site.baseurl }}/images/linkedin-color.svg" alt="LinkedIn"></a></li>
-							</ul>
-{% assign filename = page.path | remove: 'articles/_posts/' %}
-							<p><small>Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</small></p>
-						</footer>
-					</div>
-				</article>
-{% if site.environment == 'production' %}
-				<div class="row">
-					<div class="column-2">
-						<ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
-					</div>
-				</div>
-{% endif %}
-				<div class="row">
-					<div class="column-2">
-						<div id="disqus_thread"></div>
-					</div>
-					<section class="column-1">
-						<h1>Share this article</h1>
-						<ul class="share-buttons">
-							<li><div class="g-plus" data-action="share" data-annotation="bubble" data-height="24">Share on Google+</div></li>
-							<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title | strip_html }}" data-size="large" data-via="sftrabbit">Share on Twitter</a></li>
-							<li class="facebook"><div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></li>
-						</ul>
-					</section>
-				</div>
-			</div>
-			<div class="alt">
-				<div class="container">
-					<div class="row">
-{% assign related_article = site.related_posts[0] %}
-{% if related_article != nil %}
-						<section class="column-2">
-							<h1>Want something else to read?</h1>
-{% include article_list_item.html article=related_article %}
-						</section>
-{% endif %}
-						<section class="column-1">
-							<h1><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt=""> Hear about new articles</h1>
-							<p class="secondary">Subscribe to <a href="http://feeds.feedburner.com/JosephMansfield" rel="alternate external" type="application/rss+xml">the RSS feed</a> with your favourite news feed reader.</p>
-						</section>
-					</div>
-					<div class="row">
-						<div class="column-2">
-							<p><a class="button" href="{{ site.base_url }}/articles/">More articles…</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-{% include footer.html %}
-{% include scripts.html %}
-	</body>
+  <head>
+    <title>{{ page.title | strip_html }} – Joseph Mansfield</title>
+    {% include meta.html %}
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="Joseph Mansfield">
+  </head>
+  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
+    {% include header.html %}
+    <main id="content">
+      <div class="container">
+        <article class="row" itemscope itemtype="http://schema.org/TechArticle">
+          <div class="column-2">
+            <header>
+              <h1 itemprop="name">{{ page.title }}</h1>
+            </header>
+            <p class="secondary" itemprop="description">{{ page.description }}</p>
+            {{ content }}
+          </div>
+          <div class="column-1">
+            {% if site.environment == 'production' %}
+              <ins class="adsbygoogle josephmansfield-article-side" data-ad-client="ca-pub-6789411983750873" data-ad-slot="7401738733"></ins>
+            {% endif %}
+            <footer>
+              <img class="author-photo" src="http://www.gravatar.com/avatar/9f438bc04462ee5af4132921a3474842.png?s=128" alt="Joseph Mansfield">
+              <p class="author">Written by <a class="author-name" href="{{ site.base_url }}/" rel="author" itemprop="author">Joseph Mansfield</a></p>
+              <ul class="related-resources">
+                <li><a href="https://github.com/sftrabbit" title="GitHub" rel="external"><img src="{{ site.baseurl }}/images/github-color.svg" alt="GitHub"></a></li>
+                <li><a href="http://stackoverflow.com/users/150634/joseph-mansfield" title="Stack Overflow" rel="external"><img src="{{ site.baseurl }}/images/stackoverflow-color.svg" alt="Stack Overflow"></a></li>
+                <li><a href="https://twitter.com/sftrabbit" title="Twitter" rel="external"><img src="{{ site.baseurl }}/images/twitter-color.svg" alt="Twitter"></a></li>
+                <li><a href="https://plus.google.com/+JosephMansfield?rel=author" title="Google+" rel="external"><img src="{{ site.baseurl }}/images/gplus-color.svg" alt="Google+"></a></li>
+                <li><a href="https://uk.linkedin.com/in/sftrabbit/" title="LinkedIn" rel="external"><img src="{{ site.baseurl }}/images/linkedin-color.svg" alt="LinkedIn"></a></li>
+              </ul>
+              {% assign filename = page.path | remove: 'articles/_posts/' %}
+              <p><small>Notice any mistakes? <a href="https://github.com/sftrabbit/JosephMansfieldArticles/blob/master/{{ filename }}">Fork the article on GitHub</a>.</small></p>
+            </footer>
+          </div>
+        </article>
+        {% if site.environment == 'production' %}
+          <div class="row">
+            <div class="column-2">
+              <ins class="adsbygoogle josephmansfield-article-bottom" data-ad-client="ca-pub-6789411983750873" data-ad-slot="2589226334"></ins>
+            </div>
+          </div>
+        {% endif %}
+        <div class="row">
+          <div class="column-2">
+            <div id="disqus_thread"></div>
+          </div>
+          <section class="column-1">
+            <h1>Share this article</h1>
+            <ul class="share-buttons">
+              <li><div class="g-plus" data-action="share" data-annotation="bubble" data-height="24">Share on Google+</div></li>
+              <li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title | strip_html }}" data-size="large" data-via="sftrabbit">Share on Twitter</a></li>
+              <li class="facebook"><div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="alt">
+        <div class="container">
+          <div class="row">
+            {% assign related_article = site.related_posts[0] %}
+            {% if related_article != nil %}
+              <section class="column-2">
+                <h1>Want something else to read?</h1>
+                {% include article_list_item.html article=related_article %}
+              </section>
+            {% endif %}
+            <section class="column-1">
+              <h1><img src="//feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt=""> Hear about new articles</h1>
+              <p class="secondary">Subscribe to <a href="http://feeds.feedburner.com/JosephMansfield" rel="alternate external" type="application/rss+xml">the RSS feed</a> with your favourite news feed reader.</p>
+            </section>
+          </div>
+          <div class="row">
+            <div class="column-2">
+              <p><a class="button" href="{{ site.base_url }}/articles/">More articles…</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
 </html>

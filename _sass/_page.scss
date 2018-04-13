@@ -1,106 +1,106 @@
 html {
-	@media (max-width: upper-limit(tiny)) {
-		font-size: #{$tiny-font-size};
-	}
+  @media (max-width: upper-limit(tiny)) {
+    font-size: #{$tiny-font-size};
+  }
 }
 
 @mixin running {
-	color: $text-color-running;
-	background-color: $bgcolor-running;
+  color: $text-color-running;
+  background-color: $bgcolor-running;
 }
 
 body {
-	color: $text-color;
-	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-	background-color: $bgcolor;
+  color: $text-color;
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  background-color: $bgcolor;
 
-	> header {
-		@include clearfix;
-		@include running;
+  > header {
+    @include clearfix;
+    @include running;
 
-		padding: 8px 0;
+    padding: 8px 0;
 
-		.title {
-			img {
-				@include animation(fadeIn);
-				float: left;
-				margin: 4px 1em 0 0;
-				height: 2.0em;
-			}
+    .title {
+      img {
+        @include animation(fadeIn);
+        float: left;
+        margin: 4px 1em 0 0;
+        height: 2.0em;
+      }
 
-			h1 {
-				float: left;
-				margin-top: 1px;
-				font: $title-font-size $title-font-family;
-				color: $text-color-running;
-			}
-		}
+      h1 {
+        float: left;
+        margin-top: 1px;
+        font: $title-font-size $title-font-family;
+        color: $text-color-running;
+      }
+    }
 
-		.related-resources {
-			@include clearfix;
-			float: right;
+    .related-resources {
+      @include clearfix;
+      float: right;
 
-			li {
-				display: inline-block;
+      li {
+        display: inline-block;
 
-				img {
-					opacity: 0.5;
+        img {
+          opacity: 0.5;
 
-					width: 34px;
-					height: 34px;
-				}
+          width: 34px;
+          height: 34px;
+        }
 
-				img:hover {
-					@include animation(wiggle);
-				}
-			}
+        img:hover {
+          @include animation(wiggle);
+        }
+      }
 
-			@media (max-width: upper-limit(flow)) {
-				display: none;
-			}
-		}
-	}
+      @media (max-width: upper-limit(flow)) {
+        display: none;
+      }
+    }
+  }
 
-	main {
-		background-color: $bgcolor;
-	}
+  main {
+    background-color: $bgcolor;
+  }
 
-	> footer {
-		@include running;
+  > footer {
+    @include running;
 
-		.row:first-child {
-			padding: 2em 0;
-		}
+    .row:first-child {
+      padding: 2em 0;
+    }
 
-		.social-buttons {
-			text-align: right;
-		}
-	}
+    .social-buttons {
+      text-align: right;
+    }
+  }
 
 }
 
 .alt {
-	color: $text-color-alt;
-	background-color: $bgcolor-alt;
+  color: $text-color-alt;
+  background-color: $bgcolor-alt;
 
-	a {
-		color: $link-color-alt;
-	}
+  a {
+    color: $link-color-alt;
+  }
 }
 
 .contentskip {
-	position: absolute;
-	font-size: $small-font-size;
-	padding: 0 1em;
-	top: -2em;
-	left: 1em;
+  position: absolute;
+  font-size: $small-font-size;
+  padding: 0 1em;
+  top: -2em;
+  left: 1em;
 
-	&:focus {
-		top: 1em;
-	}
+  &:focus {
+    top: 1em;
+  }
 }
 
 ::selection {
-	background: #aecf4a;
-	color: #fff;
+  background: #aecf4a;
+  color: #fff;
 }
