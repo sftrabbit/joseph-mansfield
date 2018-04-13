@@ -12,7 +12,7 @@ html {
 body {
 	color: $text-color;
 	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-	background-color: $bgcolor-running;
+	background-color: $bgcolor;
 
 	> header {
 		@include clearfix;
