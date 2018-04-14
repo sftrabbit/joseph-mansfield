@@ -1,7 +1,7 @@
 <style>
 .article-list-item p {
   margin: 0;
-  width: 6em;
+  width: 10em;
   text-align: right;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .article-list-item div {
-  margin-left: 7em;
+  margin-left: 11em;
 }
 
 .article-list-item div h1 {
@@ -26,7 +26,18 @@
 }
 </style>
 <section class="article-list-item">
-  <p style="float:left"><time datetime="{{ include.article.date }}">{{ include.article.date | date_to_string }}</time></p>
+  <p style="float:left">
+    <time datetime="{{ include.article.date }}">
+      {% assign day = include.article.date | date: "%-d"  %}
+      {% case day %}
+        {% when '1' or '21' or '31' %}{{ day }}st
+        {% when '2' or '22' %}{{ day }}nd
+        {% when '3' or '23' %}{{ day }}rd
+        {% else %}{{ day }}th
+      {% endcase %}
+      {{ include.article.date | date: "%B %Y" }}
+    </time>
+  </p>
   <div>
     <h1><a href="{{ include.article.url }}">{{ include.article.title }}</a></h1>
   </div>
