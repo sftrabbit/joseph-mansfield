@@ -1,9 +1,3 @@
-html {
-  @media (max-width: upper-limit(tiny)) {
-    font-size: #{$tiny-font-size};
-  }
-}
-
 @mixin running {
   color: $text-color-running;
   background-color: $bgcolor-running;

@@ -1,19 +1,3 @@
-@mixin sidebar() {
-  @media (min-width: upper-limit(thin) + 1) {
-    float: left;
-    position: absolute;
-    margin-left: column-offset(normal, 2) - gutter-width(normal);
-    width: column-width(normal);
-  }
-
-  @media (max-width: upper-limit(thin)) and (min-width: upper-limit(flow) + 1) {
-    float: left;
-    position: absolute;
-    margin-left: column-offset(thin, 2) - gutter-width(thin);
-    width: column-width(thin);
-  }
-}
-
 p, aside {
   margin: 1.2em 0;
 

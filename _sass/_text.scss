@@ -43,10 +43,6 @@ pre {
   tab-size: 2;
   background-color: $bgcolor-alt;
 
-  @media (max-width: upper-limit(tiny)) {
-    padding: 0.5em;
-  }
-
   code {
     display: block;
     padding: 0;
