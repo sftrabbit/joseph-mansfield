@@ -1,0 +1,3 @@
+[submodule "articles/_posts"]
+	path = articles/_posts
+	url = git@github.com:sftrabbit/JosephMansfieldArticles.git
