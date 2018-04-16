@@ -1,9 +1,5 @@
 body.index {
   header {
-    padding: 0;
-    background-color: $bgcolor;
-    color: $text-color;
-
     .title {
       img {
         float: left;
@@ -13,60 +9,13 @@ body.index {
 
       h1 {
         float: none;
-        font: $index-title-font-size $title-font-family;
-        color: $text-color;
-        padding-bottom: 0.2em;
         margin: 0;
+        font: $index-title-font-size $title-font-family;
       }
-
-      @media (max-width: upper-limit(flow)) {
-        img {
-          height: 8em;
-          margin: 0;
-        }
-
-        h1 {
-          font: $flow-title-font-size $title-font-family;
-        }
-      }
-    }
-
-    p {
-      font: 22px $title-font-family;
-      margin: 0em;
-      color: $text-color-secondary;
     }
 
     .related-resources {
       float: none;
-      font: 22px $title-font-family;
-      list-style-type: none;
-
-      li {
-        display: inline-block;
-        margin: 0.4em 0.6em 0 0;
-
-        img {
-          opacity: 1;
-          width: 32px;
-          height: 32px;
-        }
-      }
-
-      @media (max-width: upper-limit(flow)) {
-        display: block;
-      }
     }
-  }
-}
-
-.bio {
-  padding-bottom: 4em;
-  margin-left: 0;
-  font-size: 19px;
-
-  .column-2 {
-    float: none;
-    margin: 0 auto;
   }
 }

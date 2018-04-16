@@ -1,5 +1,7 @@
 <meta charset="utf-8">
-<meta name="description" content="{{ page.description }}">
+{% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+{% endif %}
 <meta name="author" content="Joseph Mansfield">
 <meta name="viewport" content="width=device-width,user-scalable=no">
 <link rel="author" href="{{ site.url }}">

@@ -1,15 +1,25 @@
 <!doctype html>
 <html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" lang="en">
   <head>
-    <title>{{ page.title }}</title>
+    <title>
+      {% if page.title %}
+        {{ page.title }} —
+      {% endif %}
+      Joseph Mansfield
+    </title>
     {% include meta.html %}
   </head>
   <body{% if page.class %} class="{{ page.class }}"{% endif %}{% if page.microdata_type %} itemscope itemtype="{{ page.microdata_type }}"{% endif %}>{% for meta in page.microdata_meta %}
     <meta itemprop="{{ meta.name }}" content="{{ meta.value }}">{% endfor %}
     <div class="container">
-      {% include header.html %}
-      {{ content }}
-      {% include footer.html %}
+      <header>{% include header.html %}</header>
+      <main>
+        {% if page.title %}
+          <h1>{{ page.title }}</h1>
+        {% endif %}
+        {{ content }}
+      </main>
+      <footer>{% include footer.html %}</footer>
     </div>
     {% include scripts.html %}
   </body>

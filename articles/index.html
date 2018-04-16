@@ -1,26 +1,6 @@
 ---
 layout: default
-title: Joseph Mansfield's articles
-description: Technical articles written by Joseph Mansfield, a software developer and computer science student.
+title: Articles
+description: Technical articles on programming, game development, and other topics by software developer Joseph Mansfield.
 ---
-<div class="container">
-  {% include article_list.html num=4 %}
-</div>
-{% if site.categories.articles %}
-  <div class="alt">
-    <div class="container">
-      <div class="row">
-        <div class="column-2">
-          {% for tag in site.tags %}
-            <p><b>{{ tag | first | capitalize }} articles</b></p>
-            <ul>
-              {% for article in tag[1] %}
-                <li><a href="{{ article.url }}">{{ article.title }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-{% endif %}
+{% include article_list.html %}
