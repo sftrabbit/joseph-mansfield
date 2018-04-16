@@ -1,5 +1,5 @@
 <ul class="articles">
-  {% for article in site.categories.articles limit:include.num %}
+  {% for article in site.categories[include.category] limit:include.num %}
     <li>
       {% include article_list_item.html article=article %}
     </li>

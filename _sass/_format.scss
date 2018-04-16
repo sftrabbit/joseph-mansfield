@@ -8,6 +8,10 @@ p, aside {
   &:last-child {
     margin-bottom: 0;
   }
+
+  &.more {
+    margin-left: 11em;
+  }
 }
 
 h1 {
