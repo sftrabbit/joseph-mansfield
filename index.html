@@ -32,7 +32,7 @@ microdata_meta:
   <ul class="gallery">
     {% for website in site.data.about.websites %}
       <li>
-        <a href="{{ website.url }}"><img src="/images/{{ website.image }}"></a>
+        <a href="{{ website.url }}"><img src="/media/images/previews/{{ website.image }}"></a>
         <h1><a href="{{ website.url }}">{{ website.title }}</a></h1>
         <p>{{ website.description }}</p>
       </li>
@@ -44,7 +44,7 @@ microdata_meta:
   <ul class="gallery">
     {% for game_jam_game in site.data.about.game_jam_games %}
       <li>
-        <a href="{{ game_jam_game.url }}"><img src="/images/{{ game_jam_game.image }}"></a>
+        <a href="{{ game_jam_game.url }}"><img src="/media/images/previews/{{ game_jam_game.image }}"></a>
         <h1><a href="{{ game_jam_game.url }}">{{ game_jam_game.title }}</a></h1>
         <p>{{ game_jam_game.description }}</p>
       </li>
