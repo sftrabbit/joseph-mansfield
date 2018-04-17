@@ -45,93 +45,30 @@ hgroup {
   }
 }
 
-article {
-  h1, header h1 {
-    font-size: 1.6em;
-    font-weight: 700;
-    line-height: 1.4em;
-    color: $header-color;
+aside {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $text-color-secondary;
+}
 
-    a {
-      color: $header-color;
-    }
-  }
+figure {
+  @include clearfix;
+  margin-bottom: 1em;
+}
 
-  footer {
-    margin-top: 1.5em;
-    text-align: center;
+figure img, figure pre {
+  float: left;
+  max-width: 100%;
+}
 
-    .author-photo {
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-    }
+pre {
+  overflow: auto;
+}
 
-    .author {
-      font-size: $small-font-size;
-
-      .author-name {
-        display: block;
-        font-size: $base-font-size;
-      }
-
-      small {
-        margin-top: 0.5em;
-      }
-    }
-
-    .related-resources {
-      li {
-        display: inline-block;
-        width: 34px;
-        height: 34px;
-        margin: 4px;
-
-        img {
-          width: 34px;
-          height: 34px;
-        }
-      }
-    }
-
-    p small {
-      margin: 0 2em;
-    }
-  }
-
-  section h1 {
-    margin-top: 2em;
-    font-size: 1.2em;
-    font-weight: 700;
-    line-height: 1.4em;
-    color: $text-color;
-  }
-
-  aside {
-    font-size: 0.8em;
-    line-height: 1.4em;
-    color: $text-color-secondary;
-  }
-
-  figure {
-    @include clearfix;
-    margin-bottom: 1em;
-  }
-
-  figure img, figure pre {
-    float: left;
-    max-width: 100%;
-  }
-
-  pre {
-    margin: 1.2em 0;
-    overflow: auto;
-  }
-
-  figcaption {
-    font-size: 0.8em;
-    line-height: 1.4em;
-    color: $text-color-secondary;
-  }
+figcaption {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $text-color-secondary;
 }
 
 ul {
