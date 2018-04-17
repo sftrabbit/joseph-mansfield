@@ -1,32 +1,5 @@
-<style>
-.article-list-item p {
-  margin: 0;
-  width: 10em;
-  text-align: right;
-}
-
-.article-list-item time {
-  font-style: italic;
-}
-
-.article-list-item:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.article-list-item div {
-  margin-left: 11em;
-}
-
-.article-list-item div h1 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: normal;
-}
-</style>
-<section class="article-list-item">
-  <p style="float:left">
+<section>
+  <p>
     <time datetime="{{ include.article.date }}">
       {% assign day = include.article.date | date: "%-d"  %}
       {% case day %}

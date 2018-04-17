@@ -1,4 +1,4 @@
-<ul class="articles">
+<ul class="posts">
   {% for article in site.categories[include.category] limit:include.num %}
     <li>
       {% include article_list_item.html article=article %}
