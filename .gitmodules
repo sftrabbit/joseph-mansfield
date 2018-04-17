@@ -1,6 +1,6 @@
 [submodule "articles/_posts"]
 	path = articles/_posts
-	url = git@github.com:sftrabbit/JosephMansfieldArticles.git
+	url = git@github.com:sftrabbit/joseph-mansfield-articles.git
 [submodule "blog/_posts"]
 	path = blog/_posts
 	url = git@github.com:sftrabbit/joseph-mansfield-blog.git
