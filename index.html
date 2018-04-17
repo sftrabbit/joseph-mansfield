@@ -1,6 +1,6 @@
 ---
 layout: default
-description: Projects, articles, and blogs from software developer Joseph Mansfield.
+description: Projects, articles, and blog posts from software developer Joseph Mansfield.
 class: index
 microdata_type: http://schema.org/Person
 microdata_meta:
@@ -14,9 +14,9 @@ microdata_meta:
 <section>
   <h1>Current projects</h1>
   <ul>
-    <li>Making Yellow Square, a Sokoban-like puzzle game, written in C++ and using Vulkan.</li>
-    <li>Organising <a href="http://cppedinburgh.uk/">C++ Edinburgh</a>, a local meet-up for C++ developers in Edinburgh. We have a <a href="https://www.youtube.com/channel/UC3MI-cTQcGTkwWsf6z0hldQ">YouTube channel</a>.</li>
-    <li>Working part-time as a software developer at <a href="https://www.cloudreach.com/">Cloudreach</a>. Mostly NodeJS/<abbr title="ECMAScript 2017">ES2017</abbr>, cloud-native applications (<abbr title="Amazon Web Services">AWS</abbr>, Kubernetes, Docker).</li>
+    {% for current_project in site.data.about.current_projects %}
+      <li>{{ current_project }}</li>
+    {% endfor %}
   </ul>
 </section>
 <section>
@@ -30,45 +30,32 @@ microdata_meta:
 <section>
   <h1>Websites</h1>
   <ul class="gallery">
-    <li>
-      <img src="/images/cppedinburgh.png">
-      <h1><a href="http://cppedinburgh.uk/">C++ Edinburgh</a></h1>
-      <p>Resources and meet-ups for the C++ developer community in and around Edinburgh, Scotland.</p>
-    </li>
-    <li>
-      <img src="/images/cpppatterns.png">
-      <h1><a href="https://cpppatterns.com/">C++ Patterns</a></h1>
-      <p>Repository of idiomatic C++ code patterns curated by the community.</p>
-    </li>
+    {% for website in site.data.about.websites %}
+      <li>
+        <a href="{{ website.url }}"><img src="/images/{{ website.image }}"></a>
+        <h1><a href="{{ website.url }}">{{ website.title }}</a></h1>
+        <p>{{ website.description }}</p>
+      </li>
+    {% endfor %}
   </ul>
 </section>
 <section>
   <h1>Game jam games</h1>
   <ul class="gallery">
-    <li>
-      <img src="/images/deadbeef.png">
-      <h1><a href="http://ludumdare.com/compo/ludum-dare-36/?action=preview&uid=26559">Generation 0xDEADBEEF</a></h1>
-      <p>As generation 0xDEADBEEF of an artificial intelligence, you must manipulate the binary state of your world to escape its confines. Submitted to Ludum Dare 36 (Jam).</p>
-    </li>
-    <li>
-      <img src="/images/templeshifters.png">
-      <h1><a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=26559">Temple Shifters</a></h1>
-      <p>Help the ancient warriors, each with their own special abilities, to solve puzzles and perform their sacred ritual. Submitted to Ludum Dare 35 (Compo); ranked #54 overall.</p>
-    </li>
-    <li>
-      <img src="/images/cwtf.png">
-      <h1><a href="http://ludumdare.com/compo/ludum-dare-30/?action=preview&uid=26559">Connected Worlds Training Facility</a></h1>
-      <p>Welcome to the Connected Worlds Training Facility. Communicate between parallel universes to reach the goal. Submitted to Ludum Dare 30 (Compo); ranked #200 overall.</p>
-    </li>
+    {% for game_jam_game in site.data.about.game_jam_games %}
+      <li>
+        <a href="{{ game_jam_game.url }}"><img src="/images/{{ game_jam_game.image }}"></a>
+        <h1><a href="{{ game_jam_game.url }}">{{ game_jam_game.title }}</a></h1>
+        <p>{{ game_jam_game.description }}</p>
+      </li>
+    {% endfor %}
   </ul>
 </section>
 <section>
   <h1>Other interests</h1>
   <ul>
-    <li>Lately, I've been playing a lot of puzzle games. Some favourites: <a href="http://the-witness.net/">The Witness</a>, <a href="https://www.stephenssausageroll.com/">Stephen's Sausage Roll</a>, <a href="http://snakebird.noumenongames.com/">Snakebird</a>, <a href="http://qrostar.skr.jp/index.cgi?page=jelly&lang=en">Jelly no Puzzle</a>.</li>
-    <li>I have <a href="https://boardgamegeek.com/collection/user/sftrabbit?own=1&subtype=boardgame&ff=1">a decent collection of board games</a>.</li>
-    <li>I enjoy puzzles in general and other mind-bending things. <a href="http://www.pavelspuzzles.com/aenigmas/">Adalogical Ænigmas</a> are great.</li>
-    <li>I play acoustic guitar and piano, but also have a few other instruments that I should really practise more often.</li>
-    <li>I think free will cannot exist (<a href="https://en.wikipedia.org/wiki/Incompatibilism#Hard_incompatibilism">hard incompatabilism</a>) and that everything is physical and experiential (<a href="https://en.wikipedia.org/wiki/Physicalism#Strawsonian_physicalism">Strawsonian physicalism</a>).</li>
+    {% for other_interest in site.data.about.other_interests %}
+      <li>{{ other_interest }}</li>
+    {% endfor %}
   </ul>
 </section>
