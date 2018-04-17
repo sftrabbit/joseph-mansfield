@@ -4,3 +4,6 @@
 [submodule "blog/_posts"]
 	path = blog/_posts
 	url = git@github.com:sftrabbit/joseph-mansfield-blog.git
+[submodule "media"]
+	path = media
+	url = git@github.com:sftrabbit/joseph-mansfield-media.git
