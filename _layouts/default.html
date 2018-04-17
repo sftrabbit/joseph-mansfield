@@ -34,6 +34,9 @@
           </hgroup>
         {% endif %}
         {{ content }}
+        {% if page.is_post %}
+          <div id="disqus_thread"></div>
+        {% endif %}
       </main>
       <footer>{% include footer.html %}</footer>
     </div>

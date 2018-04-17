@@ -9,3 +9,9 @@ media_url: "/media"
 permalink: /:categories/:title.html
 excerpt_separator: ""
 environment: development
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
