@@ -60,7 +60,7 @@ module Jekyll
 
           post_limit = site.config['rss_post_limit'].nil? ? site.categories[category].count : site.config['rss_post_limit'] - 1
 
-          site.categories[category].reverse[0..post_limit].each do |doc|
+          site.categories[category][0..post_limit].each do |doc|
             doc.read
             maker.items.new_item do |item|
               link = "#{site.config['url']}#{doc.url}"
