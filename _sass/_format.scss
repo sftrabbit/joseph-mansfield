@@ -37,6 +37,14 @@ section h1 {
   }
 }
 
+hgroup {
+  margin: 2em 0 1em 0;
+
+  h1, h2 {
+    margin: 0;
+  }
+}
+
 article {
   h1, header h1 {
     font-family: $header-font-family;
