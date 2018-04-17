@@ -21,13 +21,11 @@ microdata_meta:
 </section>
 <section>
   <h1>Articles</h1>
-  {% include article_list.html category="articles" num=6 %}
-  <p class="more"><a href="/articles">More articles →</a></p>
+  {% include article_list.html category="articles" items="articles" num=6 %}
 </section>
 <section>
   <h1>Blog</h1>
-  {% include article_list.html category="blog" num=6 %}
-  <p class="more"><a href="/blog">More blog posts →</a></p>
+  {% include article_list.html category="blog" items="blog posts" num=6 %}
 </section>
 <section>
   <h1>Websites</h1>
