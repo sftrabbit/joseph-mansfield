@@ -103,6 +103,17 @@ ul {
             font-weight: normal;
           }
         }
+
+        @media (max-width: upper-limit(tiny)) {
+          > p {
+            float: none;
+            text-align: left;
+          }
+
+          > div {
+            margin: 0;
+          }
+        }
       }
     }
   }
@@ -124,7 +135,7 @@ ul {
         width: 10em;
       }
 
-      div {
+      > div {
         margin-left: 11em;
 
         h1 {
@@ -134,6 +145,17 @@ ul {
 
         p {
           margin: 0.5em 0;
+        }
+      }
+
+      @media (max-width: upper-limit(tiny)) {
+        img {
+          float: none;
+          margin-bottom: 1em;
+        }
+
+        div {
+          margin: 0;
         }
       }
     }

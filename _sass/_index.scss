@@ -12,6 +12,20 @@ body.index {
         margin: 0;
         font: $index-title-font-size $title-font-family;
       }
+
+      @media (max-width: upper-limit(flow)) {
+        h1 {
+          font: $flow-title-font-size $title-font-family;
+        }
+
+        img {
+          height: 6em;
+        }
+      }
+
+      @media (max-width: upper-limit(tiny)) {
+        @include clearfix;
+      }
     }
 
     .related-resources {

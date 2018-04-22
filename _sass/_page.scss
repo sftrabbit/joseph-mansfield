@@ -26,13 +26,7 @@ body {
       }
 
       @media (max-width: upper-limit(flow)) {
-        img {
-          height: 6em;
-        }
-
-        h1 {
-          font: $flow-title-font-size $title-font-family;
-        }
+        @include clearfix;
       }
     }
 
@@ -60,6 +54,7 @@ body {
 
       @media (max-width: upper-limit(flow)) {
         display: block;
+        float: none;
       }
     }
   }
