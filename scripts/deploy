@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+git clone https://github.com/sftrabbit/joseph-mansfield-build.git build
+cd build
+
+git config user.name $GIT_NAME
+git config user.email $GIT_EMAIL
+
+rm -r *
+cp -r ../_site/* .
+cp ../README.build.md ./README.md
+echo "josephmansfield.uk" > CNAME
+
+git add -A
+timestamp="$(date +"%Y%m%d%H%M%S")"
+git commit -m "Build $timestamp"
+
+git push -q "https://${GH_TOKEN}@github.com/sftrabbit/joseph-mansfield-build.git" master

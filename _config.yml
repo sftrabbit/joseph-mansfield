@@ -2,7 +2,11 @@ name: Joseph Mansfield
 author: Joseph Mansfield
 highlighter: pygments
 encoding: UTF-8
-exclude: ['README.md', 'Gemfile*']
+exclude:
+- README.md
+- README.build.md
+- Gemfile*
+- vendor
 url: ""
 baseurl: ""
 media_url: "/media"
