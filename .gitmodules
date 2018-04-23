@@ -1,0 +1,9 @@
+[submodule "articles/_posts"]
+	path = articles/_posts
+	url = https://github.com/sftrabbit/joseph-mansfield-articles.git
+[submodule "blog/_posts"]
+	path = blog/_posts
+	url = https://github.com/sftrabbit/joseph-mansfield-blog.git
+[submodule "media"]
+	path = media
+	url = https://github.com/sftrabbit/joseph-mansfield-media.git

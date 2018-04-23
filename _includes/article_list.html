@@ -1,12 +1,11 @@
-					<div class="row">
-						<div class="column-2">
-							<ul class="articles">
-{% for article in site.categories.articles limit:include.num %}
-								<li>
-{% include article_list_item.html article=article %}
-								</li>
-{% endfor %}
-							</ul>
-						</div>
-{% include subscribe.html %}
-					</div>
+<ul class="posts">
+  {% for article in site.categories[include.category] limit:include.num %}
+    <li>
+      {% include article_list_item.html article=article %}
+    </li>
+  {% endfor %}
+</ul>
+{% assign article_count = site.categories[include.category] | size %}
+{% if include.num and include.num < article_count %}
+  <p class="more"><a href="/{{ include.category }}">More {{ include.items }} →</a></p>
+{% endif %}

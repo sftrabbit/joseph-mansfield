@@ -1,212 +1,195 @@
-@mixin sidebar() {
-	@media (min-width: upper-limit(thin) + 1) {
-		float: left;
-		position: absolute;
-		margin-left: column-offset(normal, 2) - gutter-width(normal);
-		width: column-width(normal);
-	}
+p, aside {
+  margin: 1.2em 0;
 
-	@media (max-width: upper-limit(thin)) and (min-width: upper-limit(flow) + 1) {
-		float: left;
-		position: absolute;
-		margin-left: column-offset(thin, 2) - gutter-width(thin);
-		width: column-width(thin);
-	}
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.more {
+    margin-left: 11em;
+  }
 }
 
-p, aside {
-	margin: 1.2em 0;
+h1 {
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.4em;
+  color: $text-color;
 
-	&:first-child {
-		margin-top: 0;
-	}
-
-	&:last-child {
-		margin-bottom: 0;
-	}
+  a {
+    color: $text-color;
+  }
 }
 
 section h1 {
-	margin-bottom: 1em;
-	font-weight: 700;
+  margin: 2em 0 1em 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: $text-color;
 
-	img:first-child {
-		position: relative;
-		top: 1px;
-		margin-right: 0.2em;
-	}
+  a {
+    color: $link-color;
+  }
 }
 
-article { 
-	h1, header h1 {
-		font-family: $header-font-family;
-		font-size: 1.6em;
-		font-weight: 700;
-		line-height: 1.4em;
-		color: $header-color;
+hgroup {
+  margin: 2em 0 1em 0;
 
-		a {
-			@include link-colors($header-color);
-		}
-	}
-
-	footer {
-		margin-top: 1.5em;
-		text-align: center;
-
-		.author-photo {
-			-webkit-border-radius: 50%;
-			border-radius: 50%;
-		}
-
-		.author {
-			font-size: $small-font-size;
-
-			.author-name {
-				display: block;
-				font-size: $base-font-size;
-			}
-
-			small {
-				margin-top: 0.5em;
-			}
-		}
-
-		.related-resources {
-			li {
-				display: inline-block;
-				width: 34px;
-				height: 34px;
-				margin: 4px;
-
-				img {
-					width: 34px;
-					height: 34px;
-				}
-
-				img:hover {
-					@include animation(wiggle);
-				}
-			}
-		}
-
-		p small {
-			margin: 0 2em;
-		}
-	}
-
-	section h1 {
-		margin-top: 2em;
-		font-size: 1.2em;
-		font-weight: 700;
-		line-height: 1.4em;
-		color: $text-color;
-	}
-
-	aside {
-		font-size: 0.8em;
-		line-height: 1.4em;
-		color: $text-color-secondary;
-	}
-
-	figure {
-		@include clearfix;
-		margin-bottom: 1em;
-	}
-
-	figure img, figure pre {
-		float: left;
-		max-width: 100%;
-	}
-
-	pre {
-		margin: 1.2em 0;
-		overflow: auto;
-	}
-
-	figcaption {
-		font-size: 0.8em;
-		line-height: 1.4em;
-		color: $text-color-secondary;
-	}
+  h1, h2 {
+    margin: 0;
+  }
 }
 
-.alt {
-	h1 {
-		color: $text-color;
-	}
+aside {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $text-color-secondary;
+}
 
-	article h1 a {
-		@include link-colors($header-color);
-	}
+figure {
+  @include clearfix;
+  margin-bottom: 1em;
+}
+
+figure img, figure pre {
+  float: left;
+  max-width: 100%;
+}
+
+pre {
+  overflow: auto;
+}
+
+figcaption {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $text-color-secondary;
 }
 
 ul {
-	list-style-type: disc;
+  list-style-type: disc;
 
-	li {
-		margin-left: 1.5em;
-	}
+  li {
+    margin: 0 0 0.5em 1.5em;
+  }
 
-	&.articles {
-		list-style-type: none;
-	
-		li {
-			margin: 0 0 3em 0;
-		}
-	
-		li:last-child {
-			margin: 0;
-		}
-	}
+  &.posts {
+    list-style-type: none;
+
+    > li {
+      margin: 0.5em 0;
+
+      > section {
+        @include clearfix;
+
+        > p {
+          float: left;
+          margin: 0;
+          width: 10em;
+          text-align: right;
+        }
+
+        > div {
+          margin-left: 11em;
+
+          h1 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+
+        @media (max-width: upper-limit(tiny)) {
+          > p {
+            float: none;
+            text-align: left;
+          }
+
+          > div {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.gallery {
+    list-style-type: none;
+
+    > li {
+      @include clearfix;
+      margin-left: 0;
+      margin-bottom: 1em;
+
+      > a {
+        display: block;
+      }
+
+      img {
+        float: left;
+        width: 10em;
+      }
+
+      > div {
+        margin-left: 11em;
+
+        h1 {
+          font-size: 16px;
+          margin: 0 0 0.5em 0;
+        }
+
+        p {
+          margin: 0.5em 0;
+        }
+      }
+
+      @media (max-width: upper-limit(tiny)) {
+        img {
+          float: none;
+          margin-bottom: 1em;
+        }
+
+        div {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 dl dt {
-	float: left;
-	font-weight: bold;
-	margin-right: 0.7em;
+  float: left;
+  font-weight: bold;
+  margin-right: 0.7em;
 }
 
 dl dd {
-	margin-left: 1.5em;
+  margin-left: 1.5em;
 }
 
 ol {
-	list-style-type: decimal;
+  list-style-type: decimal;
 
-	li {
-		margin: 0 0 1em 1.5em;
-	}
-}
-
-ul.share-buttons {
-	list-style-type: none;
-
-	li {
-		margin: 0;
-	}
-
-	li.facebook {
-		margin-bottom: 9px;
-	}
+  li {
+    margin: 0 0 1em 1.5em;
+  }
 }
 
 hr {
-	width: 100%;
-	height: 1px;
-	color: #ccc;
-	background-color: #ccc;
-	border: 0px;
+  width: 100%;
+  height: 1px;
+  color: #ccc;
+  background-color: #ccc;
+  border: 0px;
 }
 
-.josephmansfield-article-bottom {
-	display: block;
-	width: 100%;
-	height: 98px;
-}
-
-.josephmansfield-article-side {
-	display: block;
-	width: 100%;
-	height: 196px;
+p .icon {
+  position: relative;
+  top: 2px;
+  margin-right: 0.5em;
 }

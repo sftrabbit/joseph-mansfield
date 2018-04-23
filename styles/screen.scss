@@ -1,0 +1,22 @@
+---
+---
+
+@import "reset";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@import "colors";
+@import "fonts";
+@import "layout";
+
+@import "page";
+@import "format";
+@import "text";
+@import "syntax";
+@import "index";

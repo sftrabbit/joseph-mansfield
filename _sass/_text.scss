@@ -1,101 +1,100 @@
 small {
-	@extend .secondary;
-	display: block;
-	font-size: $small-font-size;
-	line-height: $small-line-height;
+  @extend .secondary;
+  display: block;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
 }
 
 em, i, dfn {
-	font-style: italic;
+  font-style: italic;
 }
 
 strong, b {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 u {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 cite {
-	font-style: italic;
+  font-style: italic;
 }
 
 mark {
-	background-color: #FFF68C;
-	padding: 0 0.2em;
+  background-color: #FFF68C;
+  padding: 0 0.2em;
+}
+
+time {
+  font-style: italic;
 }
 
 code {
-	padding: 2px 4px;
-	background-color: $bgcolor-alt;
-	font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
-	font-size: $code-font-size;
-	line-height: 1em;
+  padding: 2px 4px;
+  background-color: $bgcolor-alt;
+  font-family: 'Ubuntu Mono', 'Courier New', sans-serif;
+  font-size: $code-font-size;
+  line-height: 1em;
 }
 
 h1 code {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 pre {
-	padding: 0.5em 1em;
-	tab-size: 2;
-	background-color: $bgcolor-alt;
+  padding: 0.5em 1em;
+  tab-size: 2;
+  background-color: $bgcolor-alt;
 
-	@media (max-width: upper-limit(tiny)) {
-		padding: 0.5em;
-	}
-
-	code {
-		display: block;
-		padding: 0;
-		line-height: 1.4em;
-	}
+  code {
+    display: block;
+    padding: 0;
+    line-height: 1.4em;
+  }
 }
 
 a {
-	@include link-colors($link-color);
-	@include hover-link;
+  color: $link-color;
+  text-decoration: none;
 }
 
 a.button {
-	@include border-radius(5px);
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: $button-bgcolor;
+  border-radius: 5px;
+  color: $button-text-color;
 
-	display: inline-block;
-	padding: 0.5em 1em;
-	background-color: $button-bgcolor;
-	color: $button-text-color;
-
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 a:not([href]) {
-	color: $text-color;
+  color: $text-color;
 
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .reference {
-	vertical-align: super;
-	font-size: 60%;
+  vertical-align: super;
+  font-size: 60%;
 }
 
 .secondary {
-	color: $text-color-secondary;
+  color: $text-color-secondary;
 
-	a {
-		@include link-colors($link-color-secondary);
-	}
+  a {
+    color: $link-color-secondary;
+  }
 }
 
 
 body > footer {
-	a {
-		color: $link-color-running;
-	}
+  a {
+    color: $link-color-running;
+  }
 }

@@ -1,27 +1,19 @@
-		<header>
-			<div class="container">
-				<a class="contentskip" href="#content">Skip to content</a>
+<a class="contentskip" href="#content">Skip to content</a>
 {% if page.class == 'index' %}
-				<a class="title" href="{{ site.baseurl }}/">
-					<img src="{{ site.baseurl }}/images/logo.svg" alt="">
-					<h1 itemprop="name">Joseph Mansfield</h1>	
-				</a>
-				<p>Cloud systems developer.</p>
-				<p>Software developer. C++ enthusiast.</p>
-{% assign image_suffix = 'color' %}
+  <a class="title" href="{{ site.baseurl }}/">
+    <img src="{{ site.baseurl }}/images/logo.svg" alt="">
+    <h1 itesmprop="name">Joseph Mansfield</h1>
+  </a>
+  <p>Making a puzzle game. Part-time software developer.</p>
+  {% assign image_suffix = 'color' %}
 {% else %}
-				<a class="title" href="{{ site.baseurl }}/">
-					<img src="{{ site.baseurl }}/images/header-icon.svg" alt="">
-					<h1>Joseph Mansfield</h1>	
-				</a>
-{% assign image_suffix = 'white' %}
+  <a class="title" href="{{ site.baseurl }}/">
+    <img src="{{ site.baseurl }}/images/header-icon.svg" alt="">
+    <h1>Joseph Mansfield</h1>
+  </a>
+  {% assign image_suffix = 'white' %}
 {% endif %}
-				<ul class="related-resources">
-					<li><a href="https://github.com/sftrabbit" title="GitHub" rel="external"><img src="{{ site.baseurl }}/images/github-{{ image_suffix }}.svg" alt="GitHub"></a></li>
-					<li><a href="http://stackoverflow.com/users/150634/joseph-mansfield" title="Stack Overflow" rel="external"><img src="{{ site.baseurl }}/images/stackoverflow-{{ image_suffix }}.svg" alt="Stack Overflow"></a></li>
-					<li><a href="https://twitter.com/sftrabbit" title="Twitter" rel="external"><img src="{{ site.baseurl }}/images/twitter-{{ image_suffix }}.svg" alt="Twitter"></a></li>
-					<li><a href="https://plus.google.com/+JosephMansfield" title="Google+" rel="external"><img src="{{ site.baseurl }}/images/gplus-{{ image_suffix }}.svg" alt="Google+"></a></li>
-					<li><a href="https://uk.linkedin.com/in/sftrabbit/" title="LinkedIn" rel="external"><img src="{{ site.baseurl }}/images/linkedin-{{ image_suffix }}.svg" alt="LinkedIn"></a></li>
-				</ul>
-			</div>
-		</header>
+<ul class="related-resources">
+  <li><a href="https://twitter.com/sftrabbit" title="Twitter" rel="external">@sftrabbit</a></li>
+  <li><a href="https://github.com/sftrabbit" title="GitHub" rel="external">GitHub</a></li>
+</ul>
