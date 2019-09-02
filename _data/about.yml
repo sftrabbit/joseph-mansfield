@@ -6,7 +6,7 @@ current_projects:
 
 websites:
 - title: C++ Edinburgh
-  image: cppedinburgh.png
+  image: cppedinburgh.svg
   description: Resources and meet-ups for the C++ developer community in and around Edinburgh, Scotland.
   url: http://cppedinburgh.uk/
 - title: C++ Patterns
