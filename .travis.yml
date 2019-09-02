@@ -3,6 +3,6 @@ branches:
   only:
   - master
 env:
-- secure: "mRZfxp6YHeLg7/bx579u3r43+rykCzcMjPXAKyq19vo/MiS65RvdmfbWWSh2n8OJmdnYdl/Se2dv7fueb2UA5+iRA84gVk3x5RAL9hWPooY1SDh2xBszmYx53vdy3VdJQaQa/uW1uq4TOEZEvjcVwULoLhoUNRNxghGxhIZzBAQ="
+- secure: "N9hu5GcqFqY167wB3aCEvxPMr4Qf5UDEKWRny01iXK8S/Imw8Xp4ZIpeCMivCrQoQ3We9dWoc+mq0JAcpso1997nn3FJIm95/X5/zldIwUmy/oECEKdjptaNGq+dNGgHwQ+Z5gAzeYATQlv9GeGUcrN3y3ptoFhwM4P12uH9Q9U="
 script: ./scripts/build
 after_success: ./scripts/deploy

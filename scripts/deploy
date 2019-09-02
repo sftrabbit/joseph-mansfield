@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e
+
 git clone https://github.com/sftrabbit/joseph-mansfield-build.git build
 cd build
 
