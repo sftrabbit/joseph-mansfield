@@ -2,11 +2,17 @@
 
 set -e
 
+echo 'Cloning build repository'
+
 git clone https://github.com/sftrabbit/joseph-mansfield-build.git build
 cd build
 
+echo 'Configuring git'
+
 git config user.name $GIT_NAME
 git config user.email $GIT_EMAIL
+
+echo 'Creating build commit'
 
 rm -r *
 cp -r ../_site/* .
@@ -17,4 +23,6 @@ git add -A
 timestamp="$(date +"%Y%m%d%H%M%S")"
 git commit -m "Build $timestamp"
 
-git push -q "https://${GH_TOKEN}@github.com/sftrabbit/joseph-mansfield-build.git" master
+echo 'Pushing build commit'
+
+git push "https://${GH_TOKEN}@github.com/sftrabbit/joseph-mansfield-build.git" master
