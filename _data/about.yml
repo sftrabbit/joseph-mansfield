@@ -14,6 +14,12 @@ websites:
   description: Repository of idiomatic C++ code patterns curated by the community.
   url: https://cpppatterns.com/
 
+puzzles:
+- title: Rickety Rooms
+  image: rickety-rooms.png
+  description: You have been hired to design a house for a very picky family. Add walls and doors to this floorplan while keeping in mind that living rooms must be downstairs and bedrooms upstairs.
+  url: /media/images/rickety-rooms.png
+
 game_jam_games:
 - title: Generation 0xDEADBEEF
   image: deadbeef.png
