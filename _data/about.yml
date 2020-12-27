@@ -1,8 +1,8 @@
 current_projects:
-- Making Mazedoku, a pen-and-paper logic puzzle.
+- Experimenting with PuzzleScript game engine modifications.
 - Organising <a href="http://cppedinburgh.uk/">C++ Edinburgh</a>, a local meet-up for C++ developers in Edinburgh. We have a <a href="https://www.youtube.com/channel/UC3MI-cTQcGTkwWsf6z0hldQ">YouTube channel</a>.
 - Recording <a href="https://www.youtube.com/c/JosephMansfield">Let's Plays</a> of mostly puzzle games.
-- Working as a software developer at <a href="https://www.cloudreach.com/">Cloudreach</a>. Mostly NodeJS/<abbr title="ECMAScript 2017">ES2017</abbr>, cloud-native applications (<abbr title="Amazon Web Services">AWS</abbr>, Kubernetes, Docker).
+- Working as a software developer at <a href="https://www.cloudreach.com/">Cloudreach</a>. Mostly NodeJS, <abbr title="ECMAScript 2017">ES2017</abbr>+, TypeScript, Python, cloud-native applications (<abbr title="Amazon Web Services">AWS</abbr>, <abbr title="Google Cloud Platform">GCP</abbr>, Kubernetes, Docker).
 
 websites:
 - title: C++ Edinburgh
@@ -13,6 +13,12 @@ websites:
   image: cpppatterns.png
   description: Repository of idiomatic C++ code patterns curated by the community.
   url: https://cpppatterns.com/
+
+puzzles:
+- title: Rickety Rooms
+  image: rickety-rooms.png
+  description: You have been hired to design a house for a very picky family. Add walls and doors to this floorplan while keeping in mind that living rooms must be downstairs and bedrooms upstairs.
+  url: /media/images/rickety-rooms.png
 
 game_jam_games:
 - title: Generation 0xDEADBEEF

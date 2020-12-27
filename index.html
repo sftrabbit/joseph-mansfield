@@ -42,6 +42,20 @@ microdata_meta:
   </ul>
 </section>
 <section>
+  <h1>Puzzles</h1>
+  <ul class="gallery">
+    {% for puzzle in site.data.about.puzzles %}
+      <li>
+        <a href="{{ puzzle.url }}"><img src="{{ site.media_url }}/images/previews/{{ puzzle.image }}"></a>
+        <div>
+          <h1><a href="{{ puzzle.url }}">{{ puzzle.title }}</a></h1>
+          <p>{{ puzzle.description }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<section>
   <h1>Game jam games</h1>
   <ul class="gallery">
     {% for game_jam_game in site.data.about.game_jam_games %}
