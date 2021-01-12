@@ -19,6 +19,10 @@ puzzles:
   image: rickety-rooms.png
   description: You have been hired to design a house for a very picky family. Add walls and doors to this floorplan while keeping in mind that living rooms must be downstairs and bedrooms upstairs.
   url: /media/images/rickety-rooms.png
+- title: Roost
+  image: roost.png
+  description: It's winter, food supplies are low, and the neighbourhood cats are on the prowl. Fly a route to every bird feeder, avoiding the cats, and return safely back to your roost.
+  url: /media/images/roost.png
 
 contributions:
 - title: Level 36 of <i>Dr Jelly and Mr Slime</i>
