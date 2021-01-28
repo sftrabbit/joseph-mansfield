@@ -25,6 +25,10 @@ puzzles:
   url: /media/images/roost.png
 
 contributions:
+- title: Level 2 of <i>Indiana Hat and the Temple of Puzz</i>
+  image: indianahat.png
+  description: Explore a temple of treasures with your crate-carrying hat in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the second level and some animations.
+  url: https://thinkycollective.itch.io/indiana-hat-and-the-temple-of-puzz
 - title: Level 36 of <i>Dr Jelly and Mr Slime</i>
   image: drjelly.png
   description: Transform between human and slime in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the final level and some animations.
