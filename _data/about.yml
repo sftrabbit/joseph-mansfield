@@ -15,41 +15,49 @@ websites:
   url: https://cpppatterns.com/
 
 puzzles:
-- title: Rickety Rooms
-  image: rickety-rooms.png
-  description: You have been hired to design a house for a very picky family. Add walls and doors to this floorplan while keeping in mind that living rooms must be downstairs and bedrooms upstairs.
-  url: /media/images/rickety-rooms.png
 - title: Roost
   image: roost.png
   description: It's winter, food supplies are low, and the neighbourhood cats are on the prowl. Fly a route to every bird feeder, avoiding the cats, and return safely back to your roost.
+  date: '2021'
   url: /media/images/roost.png
+- title: Rickety Rooms
+  image: rickety-rooms.png
+  description: You have been hired to design a house for a very picky family. Add walls and doors to this floorplan while keeping in mind that living rooms must be downstairs and bedrooms upstairs.
+  date: '2020'
+  url: /media/images/rickety-rooms.png
 
 contributions:
 - title: Level 2 of <i>Indiana Hat and the Temple of Puzz</i>
   image: indianahat.png
   description: Explore a temple of treasures with your crate-carrying hat in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the second level and some animations.
+  date: '2021'
   url: https://thinkycollective.itch.io/indiana-hat-and-the-temple-of-puzz
 - title: Level 36 of <i>Dr Jelly and Mr Slime</i>
   image: drjelly.png
   description: Transform between human and slime in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the final level and some animations.
+  date: '2020'
   url: https://thinkycollective.itch.io/dr-jelly-and-mr-slime
 
 game_jam_games:
 - title: An Elastephantastic Adventure
   image: elastephantastic.png
   description: "Help the elastephantastic elephant navigate the jungle in this puzzling adventure! Submitted to the Thinky Puzzle Game Jam."
+  date: '2021'
   url: https://sftrabbit.itch.io/an-elastephantastic-adventure
 - title: Generation 0xDEADBEEF
   image: deadbeef.png
   description: "As generation 0xDEADBEEF of an artificial intelligence, you must manipulate the binary state of your world to escape its confines. Submitted to Ludum Dare 36 (Jam)."
+  date: '2016'
   url: http://ludumdare.com/compo/ludum-dare-36/?action=preview&uid=26559
 - title: Temple Shifters
   image: templeshifters.png
   description: "Help the ancient warriors, each with their own special abilities, to solve puzzles and perform their sacred ritual. Submitted to Ludum Dare 35 (Compo); ranked #54 overall."
+  date: '2016'
   url: http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=26559
 - title: Connected Worlds Training Facility
   image: cwtf.png
   description: "Welcome to the Connected Worlds Training Facility. Communicate between parallel universes to reach the goal. Submitted to Ludum Dare 30 (Compo); ranked #200 overall."
+  date: '2014'
   url: http://ludumdare.com/compo/ludum-dare-30/?action=preview&uid=26559
 
 other_interests:

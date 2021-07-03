@@ -35,6 +35,7 @@ microdata_meta:
         <a href="{{ puzzle.url }}"><img src="{{ site.media_url }}/images/previews/{{ puzzle.image }}"></a>
         <div>
           <h1><a href="{{ puzzle.url }}">{{ puzzle.title }}</a></h1>
+          <span>({{ puzzle.date }})</span>  
           <p>{{ puzzle.description }}</p>
         </div>
       </li>
@@ -49,6 +50,7 @@ microdata_meta:
         <a href="{{ contribution.url }}"><img src="{{ site.media_url }}/images/previews/{{ contribution.image }}"></a>
         <div>
           <h1><a href="{{ contribution.url }}">{{ contribution.title }}</a></h1>
+          <span>({{ contribution.date }})</span>  
           <p>{{ contribution.description }}</p>
         </div>
       </li>
@@ -63,6 +65,7 @@ microdata_meta:
         <a href="{{ game_jam_game.url }}"><img src="{{ site.media_url }}/images/previews/{{ game_jam_game.image }}"></a>
         <div>
           <h1><a href="{{ game_jam_game.url }}">{{ game_jam_game.title }}</a></h1>
+          <span>({{ game_jam_game.date }})</span>  
           <p>{{ game_jam_game.description }}</p>
         </div>
       </li>
