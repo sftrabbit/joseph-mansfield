@@ -35,6 +35,10 @@ contributions:
   url: https://thinkycollective.itch.io/dr-jelly-and-mr-slime
 
 game_jam_games:
+- title: An Elastephantastic Adventure
+  image: elastephantastic.png
+  description: "Help the elastephantastic elephant navigate the jungle in this puzzling adventure! Submitted to the Thinky Puzzle Game Jam."
+  url: https://sftrabbit.itch.io/an-elastephantastic-adventure
 - title: Generation 0xDEADBEEF
   image: deadbeef.png
   description: "As generation 0xDEADBEEF of an artificial intelligence, you must manipulate the binary state of your world to escape its confines. Submitted to Ludum Dare 36 (Jam)."
