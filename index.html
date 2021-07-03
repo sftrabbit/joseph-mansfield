@@ -28,20 +28,6 @@ microdata_meta:
   {% include article_list.html category="blog" items="blog posts" num=6 %}
 </section>
 <section>
-  <h1>Websites</h1>
-  <ul class="gallery">
-    {% for website in site.data.about.websites %}
-      <li>
-        <a href="{{ website.url }}"><img src="{{ site.media_url }}/images/previews/{{ website.image }}"></a>
-        <div>
-          <h1><a href="{{ website.url }}">{{ website.title }}</a></h1>
-          <p>{{ website.description }}</p>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-<section>
   <h1>Puzzles</h1>
   <ul class="gallery">
     {% for puzzle in site.data.about.puzzles %}
@@ -78,6 +64,20 @@ microdata_meta:
         <div>
           <h1><a href="{{ game_jam_game.url }}">{{ game_jam_game.title }}</a></h1>
           <p>{{ game_jam_game.description }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<section>
+  <h1>Websites</h1>
+  <ul class="gallery">
+    {% for website in site.data.about.websites %}
+      <li>
+        <a href="{{ website.url }}"><img src="{{ site.media_url }}/images/previews/{{ website.image }}"></a>
+        <div>
+          <h1><a href="{{ website.url }}">{{ website.title }}</a></h1>
+          <p>{{ website.description }}</p>
         </div>
       </li>
     {% endfor %}
