@@ -1,6 +1,6 @@
 name: Joseph Mansfield
 author: Joseph Mansfield
-highlighter: pygments
+highlighter: rouge
 encoding: UTF-8
 exclude:
 - README.md
