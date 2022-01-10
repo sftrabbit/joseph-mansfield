@@ -27,6 +27,11 @@ puzzles:
   url: /media/images/rickety-rooms.png
 
 contributions:
+- title: Conveyor Con-fusion
+  image: conveyor-confusion.png
+  description: Build conveyor belt contraptions to navigate this open world puzzle adventure. Organised the project, assembled all puzzle contributions into an open world, and modified the PuzzleScript engine to support it.
+  date: '2022'
+  url: https://thinkycollective.itch.io/conveyor-confusion
 - title: Level 2 of <i>Indiana Hat and the Temple of Puzz</i>
   image: indianahat.png
   description: Explore a temple of treasures with your crate-carrying hat in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the second level and some animations.
