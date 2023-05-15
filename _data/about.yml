@@ -1,8 +1,8 @@
 current_projects:
-- Experimenting with PuzzleScript game engine modifications.
-- Organising <a href="http://cppedinburgh.uk/">C++ Edinburgh</a>, a local meet-up for C++ developers in Edinburgh. We have a <a href="https://www.youtube.com/channel/UC3MI-cTQcGTkwWsf6z0hldQ">YouTube channel</a>.
-- Recording <a href="https://www.youtube.com/c/JosephMansfield">Let's Plays</a> of mostly puzzle games.
-- Working as a software developer at <a href="https://www.cloudreach.com/">Cloudreach</a>. Mostly NodeJS, <abbr title="ECMAScript 2017">ES2017</abbr>+, TypeScript, Python, cloud-native applications (<abbr title="Amazon Web Services">AWS</abbr>, <abbr title="Google Cloud Platform">GCP</abbr>, Kubernetes, Docker).
+- Working with <a href="https://astragames.org/">Astra Games</a> to grow the thinky game genre.
+- Writing about thinky games at <a href="https://thinkygames.com">ThinkyGames.com</a>.
+- Running the <a href="https://youtube.com/@JoePlaysPuzzleGames">Joe Plays Puzzle Games</a> YouTube channel.
+- Making <a href="https://sftrabbit.itch.io/">puzzle games</a> and other fun things.
 
 websites:
 - title: C++ Edinburgh
@@ -13,6 +13,25 @@ websites:
   image: cpppatterns.png
   description: Repository of idiomatic C++ code patterns curated by the community.
   url: https://cpppatterns.com/
+
+games:
+- title: I'm Too Big For The Target
+  image: itbftt.png
+  description: Untangle a strange room of cables and mysterious boxes. Your goal is to stand on the target, but you are sadly too big for it. A single screen puzzle created for the <a href="https://confoundingcalendar.itch.io/">Confounding Calendar 2022</a>.
+  date: '2022'
+  url: https://sftrabbit.itch.io/im-too-big-for-the-target
+- title: An Elastephantastic Adventure
+  image: elastephantastic.png
+  description: Help the elastephantastic elephant navigate the jungle in this puzzling adventure! Submitted to the <a href="https://itch.io/jam/thinky-puzzle-game-jam">Thinky Puzzle Game Jam</a>.
+  date: '2021'
+  url: https://sftrabbit.itch.io/an-elastephantastic-adventure
+
+collab_projects:
+- title: Conveyor Con-fusion
+  image: conveyor-confusion.png
+  description: Build conveyor belt contraptions to navigate this open world puzzle adventure. Organised the project, assembled all puzzle contributions into an open world, and modified the PuzzleScript engine to support it.
+  date: '2022'
+  url: https://thinkycollective.itch.io/conveyor-confusion
 
 puzzles:
 - title: Roost
@@ -27,11 +46,16 @@ puzzles:
   url: /media/images/rickety-rooms.png
 
 contributions:
-- title: Conveyor Con-fusion
-  image: conveyor-confusion.png
-  description: Build conveyor belt contraptions to navigate this open world puzzle adventure. Organised the project, assembled all puzzle contributions into an open world, and modified the PuzzleScript engine to support it.
+- title: Level 3 of <i>Blast One Standing</i>
+  image: blastonestanding.png
+  description: Destroy all but one block in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the third level.
+  date: '2023'
+  url: https://thinkycollective.itch.io/blast-one-standing
+- title: Level 21 of <i>Lab Rat-ional Thinking</i>
+  image: labrationalthinking.png
+  description: Place tiles to get the mice to the exit in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the 21st level and some interface polish.
   date: '2022'
-  url: https://thinkycollective.itch.io/conveyor-confusion
+  url: https://thinkycollective.itch.io/lab-rational-thinking
 - title: Level 2 of <i>Indiana Hat and the Temple of Puzz</i>
   image: indianahat.png
   description: Explore a temple of treasures with your crate-carrying hat in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the second level and some animations.
@@ -42,28 +66,6 @@ contributions:
   description: Transform between human and slime in this collaborative puzzle game by the <a href="https://thinkycollective.itch.io/">Thinky Collective</a>. Contributed the final level and some animations.
   date: '2020'
   url: https://thinkycollective.itch.io/dr-jelly-and-mr-slime
-
-game_jam_games:
-- title: An Elastephantastic Adventure
-  image: elastephantastic.png
-  description: "Help the elastephantastic elephant navigate the jungle in this puzzling adventure! Submitted to the Thinky Puzzle Game Jam."
-  date: '2021'
-  url: https://sftrabbit.itch.io/an-elastephantastic-adventure
-- title: Generation 0xDEADBEEF
-  image: deadbeef.png
-  description: "As generation 0xDEADBEEF of an artificial intelligence, you must manipulate the binary state of your world to escape its confines. Submitted to Ludum Dare 36 (Jam)."
-  date: '2016'
-  url: http://ludumdare.com/compo/ludum-dare-36/?action=preview&uid=26559
-- title: Temple Shifters
-  image: templeshifters.png
-  description: "Help the ancient warriors, each with their own special abilities, to solve puzzles and perform their sacred ritual. Submitted to Ludum Dare 35 (Compo); ranked #54 overall."
-  date: '2016'
-  url: http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=26559
-- title: Connected Worlds Training Facility
-  image: cwtf.png
-  description: "Welcome to the Connected Worlds Training Facility. Communicate between parallel universes to reach the goal. Submitted to Ludum Dare 30 (Compo); ranked #200 overall."
-  date: '2014'
-  url: http://ludumdare.com/compo/ludum-dare-30/?action=preview&uid=26559
 
 other_interests:
 - "I've been playing lots of puzzle games and putting <a href=\"https://www.youtube.com/c/JosephMansfield\">my experiences on YouTube</a>. Some favourites: <a href=\"http://the-witness.net/\">The Witness</a>, <a href=\"https://www.stephenssausageroll.com/\">Stephen's Sausage Roll</a>, <a href=\"http://snakebird.noumenongames.com/\">Snakebird</a>, <a href=\"http://qrostar.skr.jp/index.cgi?page=jelly&lang=en\">Jelly no Puzzle</a>, <a href=\"https://hempuli.com/baba/\">Baba Is You</a>, <a href=\"https://obradinn.com/\">Return of the Obra Dinn</a>."

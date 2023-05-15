@@ -12,7 +12,7 @@ microdata_meta:
     value: http://www.gravatar.com/avatar/9f438bc04462ee5af4132921a3474842.png?s=256
 ---
 <section>
-  <h1>Current projects</h1>
+  <h1>Current activities</h1>
   <ul>
     {% for current_project in site.data.about.current_projects %}
       <li>{{ current_project }}</li>
@@ -20,77 +20,62 @@ microdata_meta:
   </ul>
 </section>
 <section>
-  <h1>Articles</h1>
-  {% include article_list.html category="articles" items="articles" num=6 %}
-</section>
-<section>
-  <h1>Blog</h1>
-  {% include article_list.html category="blog" items="blog posts" num=6 %}
-</section>
-<section>
-  <h1>Puzzles</h1>
+  <h1>Games</h1>
   <ul class="gallery">
-    {% for puzzle in site.data.about.puzzles %}
+    {% for game in site.data.about.games %}
       <li>
-        <a href="{{ puzzle.url }}"><img src="{{ site.media_url }}/images/previews/{{ puzzle.image }}"></a>
         <div>
-          <h1><a href="{{ puzzle.url }}">{{ puzzle.title }}</a></h1>
-          <span>({{ puzzle.date }})</span>  
-          <p>{{ puzzle.description }}</p>
+          <h1><a href="{{ game.url }}">{{ game.title }}</a></h1>
+          <span>({{ game.date }})</span>  
         </div>
+        <a href="{{ game.url }}"><img src="{{ site.media_url }}/images/previews/{{ game.image }}"></a>
+        <p>{{ game.description }}</p>
       </li>
     {% endfor %}
   </ul>
 </section>
 <section>
-  <h1>Collaborations</h1>
+  <h1>Collaborative projects I organized</h1>
+  <ul class="gallery">
+    {% for collab_project in site.data.about.collab_projects %}
+      <li>
+        <div>
+          <h1><a href="{{ collab_project.url }}">{{ collab_project.title }}</a></h1>
+          <span>({{ collab_project.date }})</span>
+        </div>
+        <a href="{{ collab_project.url }}"><img src="{{ site.media_url }}/images/previews/{{ collab_project.image }}"></a>
+        <p>{{ collab_project.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<section>
+  <h1>Contributions</h1>
   <ul class="gallery">
     {% for contribution in site.data.about.contributions %}
       <li>
-        <a href="{{ contribution.url }}"><img src="{{ site.media_url }}/images/previews/{{ contribution.image }}"></a>
         <div>
           <h1><a href="{{ contribution.url }}">{{ contribution.title }}</a></h1>
-          <span>({{ contribution.date }})</span>  
-          <p>{{ contribution.description }}</p>
+          <span>({{ contribution.date }})</span>
         </div>
+        <a href="{{ contribution.url }}"><img src="{{ site.media_url }}/images/previews/{{ contribution.image }}"></a>
+        <p>{{ contribution.description }}</p>
       </li>
     {% endfor %}
   </ul>
 </section>
 <section>
-  <h1>Game jam games</h1>
+  <h1>Paper puzzles</h1>
   <ul class="gallery">
-    {% for game_jam_game in site.data.about.game_jam_games %}
+    {% for puzzle in site.data.about.puzzles %}
       <li>
-        <a href="{{ game_jam_game.url }}"><img src="{{ site.media_url }}/images/previews/{{ game_jam_game.image }}"></a>
         <div>
-          <h1><a href="{{ game_jam_game.url }}">{{ game_jam_game.title }}</a></h1>
-          <span>({{ game_jam_game.date }})</span>  
-          <p>{{ game_jam_game.description }}</p>
+          <h1><a href="{{ puzzle.url }}">{{ puzzle.title }}</a></h1>
+          <span>({{ puzzle.date }})</span>
         </div>
+        <a href="{{ puzzle.url }}"><img src="{{ site.media_url }}/images/previews/{{ puzzle.image }}"></a>
+        <p>{{ puzzle.description }}</p>
       </li>
-    {% endfor %}
-  </ul>
-</section>
-<section>
-  <h1>Websites</h1>
-  <ul class="gallery">
-    {% for website in site.data.about.websites %}
-      <li>
-        <a href="{{ website.url }}"><img src="{{ site.media_url }}/images/previews/{{ website.image }}"></a>
-        <div>
-          <h1><a href="{{ website.url }}">{{ website.title }}</a></h1>
-          <p>{{ website.description }}</p>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-<section>
-  <h1>Other interests</h1>
-  <ul>
-    {% for other_interest in site.data.about.other_interests %}
-      <li>{{ other_interest }}</li>
     {% endfor %}
   </ul>
 </section>

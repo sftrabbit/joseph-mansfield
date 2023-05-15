@@ -139,33 +139,33 @@ ul {
     > li {
       @include clearfix;
       margin-left: 0;
+      padding-bottom: 1em;
       margin-bottom: 1em;
+
+      > div {
+        margin-bottom: 1rem;
+
+        h1 {
+          display: inline;
+          font-size: 16px;
+        }
+
+        span {
+          font-style: italic;
+        }
+      }
 
       > a {
         display: block;
       }
 
       img {
-        float: left;
-        width: 10em;
+        width: 100%;
+        border-radius: 0.5rem;
       }
 
-      > div {
-        margin-left: 11em;
-
-        h1 {
-          display: inline;
-          font-size: 16px;
-          margin: 0 0 0.5em 0;
-        }
-
-        span {
-          font-style: italic;
-        }
-
-        p {
-          margin: 0.5em 0;
-        }
+      p {
+        margin: 1em 0;
       }
 
       @media (max-width: upper-limit(tiny)) {
