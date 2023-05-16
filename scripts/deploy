@@ -9,8 +9,7 @@ cd build
 
 echo 'Configuring git'
 
-git config user.name $GIT_NAME
-git config user.email $GIT_EMAIL
+git config user.name "GitHub Actions"
 
 echo 'Creating build commit'
 
@@ -25,4 +24,4 @@ git commit -m "Build $timestamp"
 
 echo 'Pushing build commit'
 
-git push "https://${GH_TOKEN}@github.com/sftrabbit/joseph-mansfield-build.git" master
+git push "git@github.com:sftrabbit/joseph-mansfield-build.git" master

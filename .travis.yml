@@ -1,8 +1,0 @@
-language: ruby
-branches:
-  only:
-  - master
-env:
-- secure: "FIwbULCvW3QMNnS24nJ1hrIKNNAsoTPOVB6OeOPL6aWHYFOYRkRSsnvjCtBUwzvIJiEu0n2UJ1s+BfzLO4my4HahsMO+THLSN3UFrSGMn0xDFczOUFWV49+gUrH9qMphIa7y1OB2qRhwXjQCjSR2yR/euyidp+o8yX4iy4Cwk4E="
-script: ./scripts/build
-after_success: ./scripts/deploy
