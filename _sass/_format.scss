@@ -167,17 +167,6 @@ ul {
       p {
         margin: 1em 0;
       }
-
-      @media (max-width: upper-limit(tiny)) {
-        img {
-          float: none;
-          margin-bottom: 1em;
-        }
-
-        div {
-          margin: 0;
-        }
-      }
     }
   }
 }
